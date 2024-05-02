@@ -12,7 +12,9 @@ In onze project gaat de speler het opnemen tegen een AI. Hierbij gaat de speler,
 
 ## De Meerwaarde van de AI-component
 
-Om de meerwaarde van een AI component weer te kunnen geven, stellen we ons een racespel voor waarin de computergestuurde auto's geen eigen intelligentie hebben. We kunnen ze programmeren om een vooraf bepaald pad te volgen. Dit heeft het voordeel dat de auto's altijd de juiste weg afleggen. Hierdoor wordt het spel snel saai, omdat de auto's (AI) voorspelbaar zijn en de speler (human) het pad snel doorheeft, waardoor het te makkelijk wordt. Zelfs als we randomisatie toevoegen, blijven de auto's voorspelbaar, omdat ze nog steeds alleen maar het script volgen. Hierdoor lossen we weinig op. Door de tegenstanders een eigen intelligentie te geven en ze te trainen, kunnen ze steeds verschillende beslissingen nemen op basis van wat ze geleerd hebben. Zo wordt het spel spannender en realistischer en houden we het spel leuk. Ook houden we ruimte over voor uitbreidingen zoals verschillende moeilijkheidsgraden.
+Om de meerwaarde van een AI component weer te kunnen geven, stellen we ons een racespel voor waarin de computergestuurde auto's geen eigen intelligentie hebben. We kunnen ze programmeren om een vooraf bepaald pad te volgen. Dit heeft het voordeel dat de auto's altijd de juiste weg afleggen. Hierdoor wordt het spel snel saai, omdat de auto's (AI) voorspelbaar zijn en de speler (human) het pad snel doorheeft, waardoor het te makkelijk wordt. Zelfs als we randomisatie toevoegen, blijven de auto's voorspelbaar, omdat ze nog steeds alleen maar het script volgen. Hierdoor lossen we weinig op. 
+
+Door de tegenstanders een eigen intelligentie te geven en ze te trainen, kunnen ze steeds verschillende beslissingen nemen op basis van wat ze geleerd hebben. Zo wordt het spel spannender en realistischer en houden we het spel leuk. Ook houden we ruimte over voor uitbreidingen zoals verschillende moeilijkheidsgraden.
 
 ## Type AI Agent: Adversarial Self-Play
 

@@ -28,4 +28,4 @@ Er zijn verschillende redenen waarom het interessanter is om dit project uit te 
 
 ## Interactie in de Simulatie
 
-De speler zal achter het stuur van een VR auto kunnen gaan zitten. Deze auto zal bestuurd kunnen worden door de bewegingen aan het stuur en een gaspedaal knop, en een rempedaal knop. De AI heeft dezelfde "inputs", maar gebruikt deze uiteraard automatisch.
+De speler (human) zal achter het stuur van een VR auto kunnen gaan zitten. Deze auto zal bestuurd kunnen worden door de bewegingen aan het stuur en een gaspedaal knop, en een rempedaal knop. De AI heeft dezelfde "inputs", maar gebruikt deze uiteraard automatisch.

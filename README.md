@@ -24,8 +24,8 @@ Door dit type agent toe te passen, kunnen we de AI trainen in een dynamische omg
 
 ## Waarom VR?
 
-Er zijn verschillende redenen waarom het interessanter is om dit project uit te voeren in VR. Zo zorgt dit voor meer betrokkenheid van de speler. De speler kan zich meer inleven in het spel en sneller schattingen maken. Ook voor AI kan dit enorm interessant zijn, want zo leert de AI zichzelf te ontwikkeling in een realistische omgeving.
+Er zijn verschillende redenen waarom het interessanter is om dit project uit te voeren in VR. Zo zorgt dit voor meer betrokkenheid van de speler. De speler kan zich meer inleven in het spel en sneller schattingen maken. Ook voor AI kan dit enorm interessant zijn, want zo leert de AI zichzelf te ontwikkeling in een realistische omgeving. Verder geeft een VR omgeving het gevoel dat de speler daadwerkelijk in de speelruimte is. Zelfs de uiterste ooghoeken van de speler zullen ingenomen worden door het spel. Al deze factoren helpen mee om het spel _immersive_ te maken.
 
 ## Interactie in de Simulatie
 
-De speler (human) zal achter het stuur van een VR auto kunnen gaan zitten. Deze auto zal bestuurd kunnen worden door de bewegingen aan het stuur en een gaspedaal knop, en een rempedaal knop. De AI heeft dezelfde "inputs", maar gebruikt deze uiteraard automatisch.
+De speler (human) gebruikt een VR-bril met de daarbij horende controllers om het spel te besturen. De controllers maken het mogelijk dat de auto kan rijden, draaien, afremmen en achteruit rijden. De VR-bril zal het hele zicht van de speler innemen de rol van een traditionele computer- of TV-scherm overnemen.

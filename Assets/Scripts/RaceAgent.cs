@@ -7,9 +7,7 @@ using Unity.MLAgents.Actuators;
 
 public class CubeAgent : Agent
 {
-    public Transform Target;
-    public Collider Target2;
-    private bool touched = false;
+    public Collider Target;
     public override void OnEpisodeBegin()
     {
         // reset de positie en orientatie als de agent gevallen is
@@ -17,7 +15,7 @@ public class CubeAgent : Agent
         this.transform.localRotation = Quaternion.identity;
 
         // verplaats de target naar een nieuwe willekeurige locatie 
-        Target.localPosition = new Vector3(Random.value * 8 - 4,0.5f,Random.value * 8 - 4);
+        // Target.localPosition = new Vector3(Random.value * 8 - 4,0.5f,Random.value * 8 - 4);
     }
     public override void CollectObservations(VectorSensor sensor)
     {
@@ -37,20 +35,11 @@ public class CubeAgent : Agent
 
         transform.Rotate(0.0f, rotationMultiplier* actionBuffers.ContinuousActions[1], 0.0f);
         // Beloningen
-        float distanceToTarget = Vector3.Distance(this.transform.localPosition, Target.localPosition);
     
         // target bereikt
-        if (distanceToTarget < 1.42f)
+        if (Target.bounds.Contains(transform.position))
         {
-            AddReward(0.15f);
-            touched = true;
-            Target.localPosition = new Vector3(99,-99,99);
-        }
-        if (Target2.bounds.Contains(transform.position))
-        {
-            AddReward(0.1f);
-            if (touched){AddReward(0.85f);};
-            touched = false;
+            AddReward(1f);
             EndEpisode();
         }
         // Van het platform gevallen?

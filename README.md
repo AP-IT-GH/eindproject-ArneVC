@@ -29,3 +29,61 @@ Er zijn verschillende redenen waarom het interessanter is om dit project uit te 
 ## Interactie in de Simulatie
 
 De speler (human) gebruikt een VR-bril met de daarbij horende controllers om het spel te besturen. De controllers maken het mogelijk dat de auto kan rijden, draaien, afremmen en achteruit rijden. De VR-bril zal het hele zicht van de speler innemen de rol van een traditionele computer- of TV-scherm overnemen.
+
+# VR Racing: Competing against AI driven car
+
+Arne Van Campenhout
+Hamzah Bhatti
+Jarn Vaerewijck
+Youssef Kasmi
+
+## Inleiding
+
+Deze tutorial helpt de lezer om het project (van scratch) te reproduceren. Zo wordt er stap voor stap uitgelegd welke stappen er moeten ondernomen en waarom we bepaalde zakens uit te voeren. Na deze tutorial zal je een volledige AI powered project hebben en extra kennis over ML Agents.
+
+## Methoden
+### Installatie
+
+Creeër een 3D project, importeer Race car package[^1] Race kart model[^2]  en gebruik volgende packages.
+| (Package)  naam           | Versie      |
+|---------------------------|-------------|
+| Unity versie              |2022.3.19f1  |
+| ML Agents                 | 2.0.1       |
+| OpenXR Plugin             | 1.9.1       |
+| XR Core Utilities         | 2.3.0       |
+| XR Interaction Toolkit    | 2.5.4       |
+| XR Legacy Input Helpers   | 2.1.10      |
+| XR Plugin Management      | 4.4.1       | 
+
+Sleep de race kart model en race car in je scene. 
+
+#### Race car modeleren
+
+
+
+
+### Verloop van het spel
+
+In onze project gaat de speler het opnemen tegen een AI. Hierbij gaat de speler, in een VR omgeving, de auto besturen doorheen de racebaan. De speler zorgt er voor dat hij de finish behaalt voor de AI dit doet. De AI wordt getraind om zo snel mogelijk de finish te behalen en krijgt rewards als hij effectief obstacles vermijd en de finish bereikt voor de speler (human).
+
+### Gedrag (observaties, rewards)
+### Beschrijving van de objecten
+### One pager
+### Wijken we af van de one pager?
+
+## Resultaten
+### Tensorboard
+
+## Conclusie
+
+###### DELETE
+Youtube video[^3]
+
+###### STOP DELETE^
+
+
+[^1]:[Race Car package](https://assetstore.unity.com/packages/3d/vehicles/race-car-package-141690) | 3D Vehicles | Unity Asset Store. (2021, 7 augustus). Unity Asset Store.
+
+[^2]:[Sketchfab.](https://sketchfab.com/3d-models/race-trackkarting-track-based-on-south-garda-32c21042ba144ce9bd2822a88d5b54ec) (z.d.). Race track/Karting Track based on South Garda - Download Free 3D model by Mauro3D (@maurogsw). 
+
+[^3]:[Vanmillion Studios.](https://www.youtube.com/watch?v=jr4eb4F9PSQ) (2022, 16 april). Simple car controller in Unity 3D (Part 1- movement) | Easy Unity Tutorial 2022 [Video]. YouTube.

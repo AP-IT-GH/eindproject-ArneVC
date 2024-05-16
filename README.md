@@ -3,6 +3,7 @@
 ## Team
 
 - Arne Van Campenhout
+- Jarn Vaerewijck
 - Hamzah Bhatti
 - Youssef Kasmi
 
@@ -32,10 +33,10 @@ De speler (human) gebruikt een VR-bril met de daarbij horende controllers om het
 
 # VR Racing: Competing against AI driven car
 
-Arne Van Campenhout
-Hamzah Bhatti
-Jarn Vaerewijck
-Youssef Kasmi
+- Arne Van Campenhout
+- Jarn Vaerewijck
+- Hamzah Bhatti
+- Youssef Kasmi
 
 ## Inleiding
 

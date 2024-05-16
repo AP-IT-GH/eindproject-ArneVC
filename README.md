@@ -44,7 +44,7 @@ Deze tutorial helpt de lezer om het project (van scratch) te reproduceren. Zo wo
 ## Methoden
 ### Installatie
 
-Creeër een 3D project, importeer Race car package[^1] Race kart model[^2]  en gebruik volgende packages.
+Creeër een 3D project, importeer Race car package[^1], Race kart model[^2] en Racing Arch[^4]. Gebruik vervolgens volgende packages.
 | (Package)  naam           | Versie      |
 |---------------------------|-------------|
 | Unity versie              |2022.3.19f1  |
@@ -78,6 +78,7 @@ In onze project gaat de speler het opnemen tegen een AI. Hierbij gaat de speler,
 
 ###### DELETE
 Youtube video[^3]
+Racing Arch[^4]
 
 ###### STOP DELETE^
 
@@ -87,3 +88,5 @@ Youtube video[^3]
 [^2]:[Sketchfab.](https://sketchfab.com/3d-models/race-trackkarting-track-based-on-south-garda-32c21042ba144ce9bd2822a88d5b54ec) (z.d.). Race track/Karting Track based on South Garda - Download Free 3D model by Mauro3D (@maurogsw). 
 
 [^3]:[Vanmillion Studios.](https://www.youtube.com/watch?v=jr4eb4F9PSQ) (2022, 16 april). Simple car controller in Unity 3D (Part 1- movement) | Easy Unity Tutorial 2022 [Video]. YouTube.
+
+[^4]:[Racing Arch  | 3D model.](https://www.cgtrader.com/free-3d-models/car/racing-car/racing-arch) (z.d.). CGTrader. 

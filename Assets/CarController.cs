@@ -55,6 +55,17 @@ public class CarController : MonoBehaviour
     {
         GetInputs();
         AnimateWheels();
+        Quaternion currentRotation = carRb.rotation;
+
+        // Set the Z component of the rotation to 0
+        Quaternion newRotation = Quaternion.Euler(
+            currentRotation.eulerAngles.x,
+            currentRotation.eulerAngles.y,
+            0f
+        );
+
+        // Apply the new rotation to the Rigidbody
+        carRb.MoveRotation(newRotation);
         //WheelEffects();
     }
 

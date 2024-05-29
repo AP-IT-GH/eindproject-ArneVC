@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &9736251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -255,6 +256,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
+--- !u!1 &13130598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13130599}
+  - component: {fileID: 13130601}
+  - component: {fileID: 13130600}
+  m_Layer: 0
+  m_Name: Checkpoint (24)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &13130599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13130598}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9933251, z: -0, w: -0.11534853}
+  m_LocalPosition: {x: -1.9412, y: 0.014, z: 0.1848}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -193.247, z: 0}
+--- !u!114 &13130600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13130598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &13130601
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13130598}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &21692804
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &26914675
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &26914678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -538,6 +609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &36943884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -604,6 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &38331720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -670,6 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &38474225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -736,6 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &39332283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -752,6 +827,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &39928044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39928045}
+  - component: {fileID: 39928047}
+  - component: {fileID: 39928046}
+  m_Layer: 0
+  m_Name: Checkpoint (12)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &39928045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39928044}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7002024, z: -0, w: -0.7139444}
+  m_LocalPosition: {x: 0.738, y: 0.0288, z: 0.332}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -271.114, z: 0}
+--- !u!114 &39928046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39928044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &39928047
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39928044}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -802,6 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &40919617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -868,6 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &41645326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -934,6 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &47450123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1021,6 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &57507291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &57507294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1132,6 +1279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &58313146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1198,6 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &58978872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1264,6 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &60436896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1330,6 +1480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &61906749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1396,6 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &62628055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1462,6 +1614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &65284396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1528,6 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &68144831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1544,6 +1698,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &78527559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 78527560}
+  - component: {fileID: 78527562}
+  - component: {fileID: 78527561}
+  m_Layer: 0
+  m_Name: Checkpoint (10)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &78527560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78527559}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9999878, z: -0, w: -0.0049503082}
+  m_LocalPosition: {x: 1.3291, y: 0.0288, z: 0.2162}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -180.567, z: 0}
+--- !u!114 &78527561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78527559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &78527562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78527559}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1615,6 +1836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &83660657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,6 +1882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &83660660
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1726,6 +1949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &85050638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1792,6 +2016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &97757380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1858,6 +2083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &99112447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1996,6 +2222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &109248581
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2062,6 +2289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &116488720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2128,6 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &124446952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2144,6 +2373,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &124514472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 124514473}
+  - component: {fileID: 124514475}
+  - component: {fileID: 124514474}
+  m_Layer: 0
+  m_Name: Checkpoint (21)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &124514473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124514472}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.6700259, z: -0, w: -0.7423378}
+  m_LocalPosition: {x: -0.409, y: 0.014, z: 0.228}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -275.862, z: 0}
+--- !u!114 &124514474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124514472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &124514475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124514472}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2194,6 +2490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &130485340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2260,6 +2557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &130980798
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2347,6 +2645,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
+--- !u!1 &132268533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132268534}
+  - component: {fileID: 132268536}
+  - component: {fileID: 132268535}
+  m_Layer: 0
+  m_Name: Checkpoint (26)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &132268534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132268533}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.71753085, z: -0, w: 0.6965268}
+  m_LocalPosition: {x: -0.5921, y: 0.014, z: 0.586}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -91.702, z: 0}
+--- !u!114 &132268535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132268533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &132268536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132268533}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &133885310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2392,6 +2758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &133885313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2458,6 +2825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &137962565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2524,6 +2892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &145452459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2590,6 +2959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &145760795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2656,6 +3026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &149121946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2722,6 +3093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &150094526
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2788,6 +3160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &165585586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2854,6 +3227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &174125156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2920,6 +3294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &174256016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2986,6 +3361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &190735862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3052,6 +3428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &195284932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3118,6 +3495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &200155565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3184,6 +3562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &201825697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3250,6 +3629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &213785282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3337,6 +3717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &223974226
 GameObject:
   m_ObjectHideFlags: 0
@@ -3382,6 +3763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &223974229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3448,6 +3830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &231247145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3514,6 +3897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &236980819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3580,6 +3964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &240009312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3646,6 +4031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &240071004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3712,6 +4098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &243093399
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3778,6 +4165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &256108665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3844,6 +4232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &257885372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3910,6 +4299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &259715466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3976,6 +4366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &263170620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4042,6 +4433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &267784816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4058,6 +4450,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &283893659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283893660}
+  - component: {fileID: 283893662}
+  - component: {fileID: 283893661}
+  m_Layer: 0
+  m_Name: Checkpoint (18)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &283893660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283893659}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.70864576, z: -0, w: -0.7055645}
+  m_LocalPosition: {x: 0.476, y: 0.0288, z: 0.907}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -269.75, z: 0}
+--- !u!114 &283893661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283893659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &283893662
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283893659}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4108,6 +4567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &287187546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4174,6 +4634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &298573029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4240,6 +4701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &316055568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4306,6 +4768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &322675042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4372,6 +4835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &325263104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4438,6 +4902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &326210798
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4504,6 +4969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &327687883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4570,6 +5036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &332650354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4586,6 +5053,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &340099742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340099743}
+  - component: {fileID: 340099745}
+  - component: {fileID: 340099744}
+  m_Layer: 0
+  m_Name: Checkpoint (15)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &340099743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340099742}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7054126, z: -0, w: 0.708797}
+  m_LocalPosition: {x: 1.196, y: 0.0288, z: 0.622}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -89.726, z: 0}
+--- !u!114 &340099744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340099742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &340099745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340099742}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4636,6 +5170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &349353289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4702,6 +5237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &355878272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4768,6 +5304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &356066432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4855,6 +5392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &364252116
 GameObject:
   m_ObjectHideFlags: 0
@@ -4900,6 +5438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &364252119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4966,6 +5505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &365532925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5032,6 +5572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &375054838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5098,6 +5639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &380273772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5164,6 +5706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &382098543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5230,6 +5773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &382379754
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5296,6 +5840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &395224738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5362,6 +5907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &402107523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5449,6 +5995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &426013185
 GameObject:
   m_ObjectHideFlags: 0
@@ -5515,6 +6062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &431145618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,6 +6108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &431145621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5626,6 +6175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &436172430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5692,6 +6242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &440838111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5758,6 +6309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &446198511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5824,6 +6376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &446779241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5890,6 +6443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &453613877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5956,6 +6510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &454108529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6022,6 +6577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &461149992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6088,6 +6644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &463315787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6154,6 +6711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &464914059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6220,6 +6778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &465269407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6286,6 +6845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &508106326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6352,6 +6912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &509897827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6418,6 +6979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &512901084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6484,6 +7046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &525642589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6550,6 +7113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &525973559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6616,6 +7180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &531921502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6682,6 +7247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &532672995
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6748,6 +7314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &534299985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6814,6 +7381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &538235890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6880,6 +7448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &547795543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6946,6 +7515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &548844538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7012,6 +7582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &552637540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7078,6 +7649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &553066622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7144,6 +7716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &565424845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7210,6 +7783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &578266592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7276,6 +7850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &578477774
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7342,6 +7917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &580840384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7408,6 +7984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &601916843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7474,6 +8051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &604071642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7540,6 +8118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &615518874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7556,6 +8135,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &625945738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 625945739}
+  - component: {fileID: 625945741}
+  - component: {fileID: 625945740}
+  m_Layer: 0
+  m_Name: Checkpoint (27)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &625945739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625945738}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9656295, z: -0, w: 0.25992242}
+  m_LocalPosition: {x: -0.217, y: 0.014, z: 0.72}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -149.869, z: 0}
+--- !u!114 &625945740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625945738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &625945741
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625945738}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -7606,6 +8252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &633987597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7672,6 +8319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &638435587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7738,6 +8386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &655356088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7804,6 +8453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &660156869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7870,6 +8520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &660352091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7962,6 +8613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &670997677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8028,6 +8680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &677982272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8094,6 +8747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &697517876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8160,6 +8814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &699063507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8226,6 +8881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &702538537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8292,6 +8948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &708611095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8358,6 +9015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &709313200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8409,7 +9067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1984668758913251958, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 44.7
       objectReference: {fileID: 0}
     - target: {fileID: 1984668758913251958, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8437,7 +9095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1984668759388320319, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1984668759388320319, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8473,7 +9131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1984668759906836222, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1984668759906836222, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8493,7 +9151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1984668759991436502, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1984668759991436502, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8529,7 +9187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1984668760453204319, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 44.7
       objectReference: {fileID: 0}
     - target: {fileID: 1984668760453204319, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8549,7 +9207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1984668760497519799, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1984668760497519799, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8577,7 +9235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1984668760711245992, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1984668760711245992, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8681,6 +9339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &720854313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8747,6 +9406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &742146836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8813,6 +9473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &742360018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8879,6 +9540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &780719979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8945,6 +9607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &782628378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9011,6 +9674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &784314506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9077,6 +9741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &796273254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9491,6 +10156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &811851715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9557,6 +10223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &817087979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9573,6 +10240,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &865141607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 865141608}
+  - component: {fileID: 865141610}
+  - component: {fileID: 865141609}
+  m_Layer: 0
+  m_Name: Checkpoint (6)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &865141608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865141607}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.8499414, z: -0, w: 0.52687734}
+  m_LocalPosition: {x: -0.932, y: 0.0288, z: -0.149}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -116.411, z: 0}
+--- !u!114 &865141609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865141607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &865141610
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865141607}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -9623,6 +10357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &878957233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9689,6 +10424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &884861087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9755,6 +10491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &890686373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9821,6 +10558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &891782583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9887,6 +10625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &893537534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9953,6 +10692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &895010441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10019,6 +10759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &900588551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10040,6 +10781,66 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &912609934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 912609935}
+  m_Layer: 0
+  m_Name: Checkpoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &912609935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912609934}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1390452617}
+  - {fileID: 1968994798}
+  - {fileID: 1988534862}
+  - {fileID: 1295456952}
+  - {fileID: 1233448878}
+  - {fileID: 1749872152}
+  - {fileID: 865141608}
+  - {fileID: 1185436658}
+  - {fileID: 1069794631}
+  - {fileID: 934118784}
+  - {fileID: 78527560}
+  - {fileID: 982016845}
+  - {fileID: 39928045}
+  - {fileID: 2121902373}
+  - {fileID: 1520205963}
+  - {fileID: 340099743}
+  - {fileID: 1496627734}
+  - {fileID: 1222480799}
+  - {fileID: 283893660}
+  - {fileID: 1631952675}
+  - {fileID: 1161467977}
+  - {fileID: 124514473}
+  - {fileID: 1229394707}
+  - {fileID: 1547635850}
+  - {fileID: 13130599}
+  - {fileID: 2015811739}
+  - {fileID: 132268534}
+  - {fileID: 625945739}
+  - {fileID: 1355094643}
+  m_Father: {fileID: 1129409312}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &913159245
 GameObject:
   m_ObjectHideFlags: 0
@@ -10085,6 +10886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &913159248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10151,6 +10953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &917631314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10217,6 +11020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &920643433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10233,6 +11037,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &934118783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934118784}
+  - component: {fileID: 934118786}
+  - component: {fileID: 934118785}
+  m_Layer: 0
+  m_Name: Checkpoint (9)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &934118784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934118783}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.72452223, z: -0, w: 0.6892514}
+  m_LocalPosition: {x: 1.0968, y: 0.0288, z: 0.0735}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -92.858, z: 0}
+--- !u!114 &934118785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934118783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &934118786
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934118783}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -10283,6 +11154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &946592653
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10349,6 +11221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &948150973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10415,6 +11288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &950732701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10481,6 +11355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &952077477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10547,6 +11422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &977746865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10563,6 +11439,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &982016844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982016845}
+  - component: {fileID: 982016847}
+  - component: {fileID: 982016846}
+  m_Layer: 0
+  m_Name: Checkpoint (11)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &982016845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982016844}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7002024, z: -0, w: -0.7139444}
+  m_LocalPosition: {x: 1.2035, y: 0.0288, z: 0.3513}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -271.114, z: 0}
+--- !u!114 &982016846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982016844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &982016847
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982016844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -10613,6 +11556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &987908358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10679,6 +11623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &988524393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10745,6 +11690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1001202680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10811,6 +11757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1008248396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10877,6 +11824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1021624556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10943,6 +11891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1036540688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11009,6 +11958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1045083981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11075,6 +12025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1056578467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11141,6 +12092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1062340743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11207,6 +12159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1064201363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11273,6 +12226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1065370401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11289,6 +12243,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1069794630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069794631}
+  - component: {fileID: 1069794633}
+  - component: {fileID: 1069794632}
+  m_Layer: 0
+  m_Name: Checkpoint (8)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1069794631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069794630}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7592848, z: -0, w: 0.6507585}
+  m_LocalPosition: {x: 0.163, y: 0.0288, z: 0.026}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -98.802, z: 0}
+--- !u!114 &1069794632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069794630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1069794633
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069794630}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -11339,6 +12360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1071043318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11405,6 +12427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1077208342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11471,6 +12494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1078253240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11537,6 +12561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1079230952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11603,6 +12628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1081993170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11669,6 +12695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1082761387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11735,6 +12762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1085859574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11801,6 +12829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1089295515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11867,6 +12896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1109380628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11933,6 +12963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1111228521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11999,6 +13030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1114040583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12065,6 +13097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1117103701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12171,6 +13204,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a61007b360f79c04492e627454ba87c4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1607221987}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a61007b360f79c04492e627454ba87c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 912609935}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1103255709853447001, guid: a61007b360f79c04492e627454ba87c4, type: 3}
       insertIndex: -1
@@ -12256,6 +13292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1136450389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12322,6 +13359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1147541348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12388,6 +13426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1148094987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12454,6 +13493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1149502258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12520,6 +13560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1150080212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12586,6 +13627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1153698379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12602,6 +13644,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1161467976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1161467977}
+  - component: {fileID: 1161467979}
+  - component: {fileID: 1161467978}
+  m_Layer: 0
+  m_Name: Checkpoint (20)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1161467977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161467976}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.36779183, z: -0, w: -0.9299082}
+  m_LocalPosition: {x: 0.125, y: 0.014, z: 0.322}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -316.841, z: 0}
+--- !u!114 &1161467978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161467976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1161467979
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161467976}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -12673,6 +13782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &1178065483
 GameObject:
   m_ObjectHideFlags: 0
@@ -12718,6 +13828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1178065486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12734,6 +13845,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1185436657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185436658}
+  - component: {fileID: 1185436660}
+  - component: {fileID: 1185436659}
+  m_Layer: 0
+  m_Name: Checkpoint (7)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1185436658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185436657}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7592848, z: -0, w: 0.6507585}
+  m_LocalPosition: {x: -0.568, y: 0.0288, z: -0.094}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -98.802, z: 0}
+--- !u!114 &1185436659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185436657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1185436660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185436657}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -12784,6 +13962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1188251132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12850,6 +14029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1206232140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12916,6 +14096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1217227404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12932,6 +14113,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1222480798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1222480799}
+  - component: {fileID: 1222480801}
+  - component: {fileID: 1222480800}
+  m_Layer: 0
+  m_Name: Checkpoint (17)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1222480799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222480798}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.70864576, z: -0, w: -0.7055645}
+  m_LocalPosition: {x: 1.227, y: 0.0288, z: 0.9}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -269.75, z: 0}
+--- !u!114 &1222480800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222480798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1222480801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222480798}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -12982,6 +14230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1226274792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12998,6 +14247,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1229394706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229394707}
+  - component: {fileID: 1229394709}
+  - component: {fileID: 1229394708}
+  m_Layer: 0
+  m_Name: Checkpoint (22)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1229394707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229394706}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.5042959, z: -0, w: -0.863531}
+  m_LocalPosition: {x: -1.2263, y: 0.014, z: 0.1816}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -299.431, z: 0}
+--- !u!114 &1229394708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229394706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1229394709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229394706}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -13048,6 +14364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1231143222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13064,6 +14381,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1233448877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1233448878}
+  - component: {fileID: 1233448880}
+  - component: {fileID: 1233448879}
+  m_Layer: 0
+  m_Name: Checkpoint (4)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1233448878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233448877}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.47767425, z: -0, w: 0.87853706}
+  m_LocalPosition: {x: -1.6606, y: 0.0288, z: -0.5166}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -57.067, z: 0}
+--- !u!114 &1233448879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233448877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1233448880
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233448877}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -13114,6 +14498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1234533820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13180,6 +14565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1245444117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13246,6 +14632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1256603587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13312,6 +14699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1265963882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13378,6 +14766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1267699213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13444,6 +14833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1271335012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13510,6 +14900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1275553529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13576,6 +14967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1282638857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13592,6 +14984,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1295456951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1295456952}
+  - component: {fileID: 1295456954}
+  - component: {fileID: 1295456953}
+  m_Layer: 0
+  m_Name: Checkpoint (3)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1295456952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295456951}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.2069116, z: -0, w: 0.97835964}
+  m_LocalPosition: {x: -2.152, y: 0.0288, z: -0.162}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -23.883, z: 0}
+--- !u!114 &1295456953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295456951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1295456954
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295456951}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -13642,6 +15101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1299669370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13708,6 +15168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1311147996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13774,6 +15235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1312461756
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13840,6 +15302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1324493896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13906,6 +15369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1330402071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13972,6 +15436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1338769016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14038,6 +15503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1342829591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14104,6 +15570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1353876483
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14120,6 +15587,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1355094642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1355094643}
+  - component: {fileID: 1355094645}
+  - component: {fileID: 1355094644}
+  m_Layer: 0
+  m_Name: Checkpoint (28)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1355094643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355094642}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7135298, z: -0, w: -0.7006249}
+  m_LocalPosition: {x: -0.369, y: 0.014, z: 0.925}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -268.954, z: 0}
+--- !u!114 &1355094644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355094642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1355094645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355094642}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -14170,6 +15704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1358669775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14236,6 +15771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1364568517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14302,6 +15838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1369988959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14368,6 +15905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1378799587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14389,6 +15927,73 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1390452616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1390452617}
+  - component: {fileID: 1390452618}
+  - component: {fileID: 1390452619}
+  m_Layer: 0
+  m_Name: Checkpoint
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1390452617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390452616}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.9283, y: 0.0288, z: 0.8995}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1390452618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390452616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1390452619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390452616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
 --- !u!1 &1405464547
 GameObject:
   m_ObjectHideFlags: 0
@@ -14434,6 +16039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1405464550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14500,6 +16106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1406087494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14566,6 +16173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1414763404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14632,6 +16240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1416767770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14698,6 +16307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1423019084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14764,6 +16374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1435671365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14830,6 +16441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1438363846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14896,6 +16508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1441121869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14962,6 +16575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1445474813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15028,6 +16642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1448648784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15094,6 +16709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1452615772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15160,6 +16776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1461530218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15226,6 +16843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1468703007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15292,6 +16910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1479741902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15358,6 +16977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1485357789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15374,6 +16994,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1496627733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1496627734}
+  - component: {fileID: 1496627736}
+  - component: {fileID: 1496627735}
+  m_Layer: 0
+  m_Name: Checkpoint (16)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1496627734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496627733}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.9999888, z: -0, w: -0.0047324067}
+  m_LocalPosition: {x: 1.3888, y: 0.0288, z: 0.7477}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -180.542, z: 0}
+--- !u!114 &1496627735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496627733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1496627736
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496627733}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -15424,6 +17111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1497573414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15490,6 +17178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1508584129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15556,6 +17245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1509881923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15622,6 +17312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1512580333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15638,6 +17329,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1520205962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1520205963}
+  - component: {fileID: 1520205965}
+  - component: {fileID: 1520205964}
+  m_Layer: 0
+  m_Name: Checkpoint (14)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1520205963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520205962}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7054126, z: -0, w: 0.708797}
+  m_LocalPosition: {x: 0.6585, y: 0.0288, z: 0.5976}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -89.726, z: 0}
+--- !u!114 &1520205964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520205962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1520205965
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520205962}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -15688,6 +17446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1537486388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15754,6 +17513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1546669840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15820,6 +17580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1546850222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15915,6 +17676,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4366968233696778514, guid: 194ad2d1eb95b454db49b1f9a9e1c2d5, type: 3}
   m_PrefabInstance: {fileID: 1547572786}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1547635849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1547635850}
+  - component: {fileID: 1547635852}
+  - component: {fileID: 1547635851}
+  m_Layer: 0
+  m_Name: Checkpoint (23)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1547635850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547635849}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.71558654, z: -0, w: -0.6985242}
+  m_LocalPosition: {x: -1.6587, y: 0.014, z: -0.0376}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -268.617, z: 0}
+--- !u!114 &1547635851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547635849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1547635852
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547635849}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1556898552 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8667262410241713840, guid: a61007b360f79c04492e627454ba87c4, type: 3}
@@ -15986,6 +17814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1564234090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16052,6 +17881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1568290589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16118,6 +17948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1577749886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16184,6 +18015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1585522391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16271,6 +18103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &1590529895
 GameObject:
   m_ObjectHideFlags: 0
@@ -16316,6 +18149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1590529898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16382,6 +18216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1600812349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16448,6 +18283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1600849279
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16514,6 +18350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1602737068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16580,6 +18417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1606595165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16752,6 +18590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1615855261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16818,6 +18657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1621751645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16884,6 +18724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1623196051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16900,6 +18741,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1631952674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631952675}
+  - component: {fileID: 1631952677}
+  - component: {fileID: 1631952676}
+  m_Layer: 0
+  m_Name: Checkpoint (19)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1631952675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631952674}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.10774949, z: -0, w: -0.99417806}
+  m_LocalPosition: {x: 0.186, y: 0.0288, z: 0.776}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -347.629, z: 0}
+--- !u!114 &1631952676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631952674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1631952677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631952674}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -16971,6 +18879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &1644853286
 GameObject:
   m_ObjectHideFlags: 0
@@ -17016,6 +18925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1644853289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17082,6 +18992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1649264930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17148,6 +19059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1650790244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17214,6 +19126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1657394705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17280,6 +19193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1664981339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17346,6 +19260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1665206703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17412,6 +19327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1667433825
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17478,6 +19394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1679963779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17544,6 +19461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1697105193
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17610,6 +19528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1702205070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17676,6 +19595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1703224184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17742,6 +19662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1705541013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17808,6 +19729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1706503408
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17874,6 +19796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1714578170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17940,6 +19863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1715585981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18006,6 +19930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1716334688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18072,6 +19997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1718714461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18138,6 +20064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1719515250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18204,6 +20131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1721956700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18291,6 +20219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!1 &1728181263
 GameObject:
   m_ObjectHideFlags: 0
@@ -18336,6 +20265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1728181266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18402,6 +20332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1738952305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18468,6 +20399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1741540962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18534,6 +20466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1741572088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18600,6 +20533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1745109904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18616,6 +20550,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1749872151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749872152}
+  - component: {fileID: 1749872154}
+  - component: {fileID: 1749872153}
+  m_Layer: 0
+  m_Name: Checkpoint (5)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1749872152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749872151}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.8499414, z: -0, w: 0.52687734}
+  m_LocalPosition: {x: -1.2931, y: 0.0288, z: -0.4309}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -116.411, z: 0}
+--- !u!114 &1749872153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749872151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1749872154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749872151}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -18666,6 +20667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1760917698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18732,6 +20734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1762114083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18949,6 +20952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1787053984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19015,6 +21019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1794289449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19081,6 +21086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1802228232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19147,6 +21153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1806606172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19213,6 +21220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1809299536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19279,6 +21287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1817183962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19345,6 +21354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1827637411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19411,6 +21421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1828601338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19477,6 +21488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1838878050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19543,6 +21555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1840498262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19609,6 +21622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1851825721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19675,6 +21689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1855610032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19741,6 +21756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1858571237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19807,6 +21823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1890279360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19873,6 +21890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1899766545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19939,6 +21957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1904314634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20111,6 +22130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1929824969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20177,6 +22197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1950960219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20243,6 +22264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1951195769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20309,6 +22331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1953363702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20375,6 +22398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1955919279
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20441,6 +22465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1956449809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20507,6 +22532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1958621460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20573,6 +22599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1961219453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20639,6 +22666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1963534040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20705,6 +22733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1966109050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20721,6 +22750,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1968994797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1968994798}
+  - component: {fileID: 1968994800}
+  - component: {fileID: 1968994799}
+  m_Layer: 0
+  m_Name: Checkpoint (1)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1968994798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968994797}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -1.941, y: 0.0288, z: 0.84}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1968994799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968994797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1968994800
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968994797}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -20771,6 +22867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1970732830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20837,6 +22934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1986584459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20964,6 +23062,73 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 280335884936805859, guid: a61007b360f79c04492e627454ba87c4, type: 3}
+--- !u!1 &1988534861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1988534862}
+  - component: {fileID: 1988534864}
+  - component: {fileID: 1988534863}
+  m_Layer: 0
+  m_Name: Checkpoint (2)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1988534862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988534861}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.12652263, z: -0, w: 0.99196374}
+  m_LocalPosition: {x: -2.2764, y: 0.0288, z: 0.4265}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -14.537, z: 0}
+--- !u!114 &1988534863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988534861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &1988534864
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988534861}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1988676560
 GameObject:
   m_ObjectHideFlags: 0
@@ -21009,6 +23174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1988676563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21075,6 +23241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1993634121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21141,6 +23308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &1999024500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21207,6 +23375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2000964048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21273,6 +23442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2006111498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21289,6 +23459,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2015811738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2015811739}
+  - component: {fileID: 2015811741}
+  - component: {fileID: 2015811740}
+  m_Layer: 0
+  m_Name: Checkpoint (25)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2015811739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015811738}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.72813123, z: -0, w: 0.6854377}
+  m_LocalPosition: {x: -1.6473, y: 0.014, z: 0.5519}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -93.46, z: 0}
+--- !u!114 &2015811740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015811738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &2015811741
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015811738}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -21339,6 +23576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2016013766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21405,6 +23643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2017339919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21471,6 +23710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2018354079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21537,6 +23777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2020430448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21603,6 +23844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2029453885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21669,6 +23911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2032040577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21735,6 +23978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2041422611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21801,6 +24045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2055252746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21867,6 +24112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2063460050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21933,6 +24179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2066790681
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21999,6 +24246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2072771927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22065,6 +24313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2078553407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22131,6 +24380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2081013918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22197,6 +24447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2081981838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22263,6 +24514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2089110261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22329,6 +24581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2091718083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22395,6 +24648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2110550802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22461,6 +24715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2112973632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22527,6 +24782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvisibleBarrier: 1
 --- !u!65 &2113873690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22543,6 +24799,73 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2121902372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2121902373}
+  - component: {fileID: 2121902375}
+  - component: {fileID: 2121902374}
+  m_Layer: 0
+  m_Name: Checkpoint (13)
+  m_TagString: checkpoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2121902373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121902372}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.99996036, z: -0, w: 0.008908434}
+  m_LocalPosition: {x: 0.5085, y: 0.0288, z: 0.4701}
+  m_LocalScale: {x: 0.18863627, y: 0.061767, z: 0.005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912609935}
+  m_LocalEulerAnglesHint: {x: 0, y: -178.979, z: 0}
+--- !u!114 &2121902374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121902372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
+--- !u!65 &2121902375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121902372}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

@@ -55,6 +55,8 @@ public class CarController : MonoBehaviour
     {
         GetInputs();
         AnimateWheels();
+        //Quaternion rotation = transform.rotation;
+        //transform.rotation = Quaternion.Euler(rotation.eulerAngles.x, rotation.eulerAngles.y, 0);
         //WheelEffects();
     }
 

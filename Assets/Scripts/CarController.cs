@@ -1,13 +1,17 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Unity.MLAgents;
+using Unity.MLAgents.Sensors;
+using Unity.MLAgents.Actuators;
 
-public class CarController : MonoBehaviour
+public class CarController : Agent
 {
     public enum ControlMode
     {
         Keyboard,
-        Buttons
+        Buttons,
+        MLAgent
     };
 
     public enum Axel
@@ -21,8 +25,6 @@ public class CarController : MonoBehaviour
     {
         public GameObject wheelModel;
         public WheelCollider wheelCollider;
-        //public GameObject wheelEffectObj;
-        //public ParticleSystem smokeParticle;
         public Axel axel;
     }
 
@@ -43,28 +45,65 @@ public class CarController : MonoBehaviour
 
     private Rigidbody carRb;
 
-
-
-    void Start()
+    public override void Initialize()
     {
         carRb = GetComponent<Rigidbody>();
         carRb.centerOfMass = _centerOfMass;
     }
 
+    public override void OnEpisodeBegin()
+    {
+        ResetCar();
+    }
+
+    public override void CollectObservations(VectorSensor sensor)
+    {
+
+        sensor.AddObservation(moveInput);
+        sensor.AddObservation(steerInput);
+        sensor.AddObservation(carRb.velocity);
+        sensor.AddObservation(transform.position);
+        sensor.AddObservation(transform.rotation);
+
+    }
+
+    public override void OnActionReceived(ActionBuffers actions)
+    {
+
+        moveInput = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
+        steerInput = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
+
+
+        Move();
+        Steer();
+        Brake();
+    }
+
+    public override void Heuristic(in ActionBuffers actionsOut)
+    {
+
+        var continuousActions = actionsOut.ContinuousActions;
+        continuousActions[0] = Input.GetAxis("Vertical"); // throttle
+        continuousActions[1] = Input.GetAxis("Horizontal"); // steer
+    }
+
     void Update()
     {
-        GetInputs();
+        if (control == ControlMode.Keyboard)
+        {
+            GetInputs();
+        }
         AnimateWheels();
-        //Quaternion rotation = transform.rotation;
-        //transform.rotation = Quaternion.Euler(rotation.eulerAngles.x, rotation.eulerAngles.y, 0);
-        //WheelEffects();
     }
 
     void LateUpdate()
     {
-        Move();
-        Steer();
-        Brake();
+        if (control != ControlMode.MLAgent)
+        {
+            Move();
+            Steer();
+            Brake();
+        }
     }
 
     public void MoveInput(float input)
@@ -114,7 +153,6 @@ public class CarController : MonoBehaviour
             {
                 wheel.wheelCollider.brakeTorque = 300 * brakeAcceleration * Time.deltaTime;
             }
-
         }
         else
         {
@@ -122,7 +160,6 @@ public class CarController : MonoBehaviour
             {
                 wheel.wheelCollider.brakeTorque = 0;
             }
-
         }
     }
 
@@ -138,21 +175,13 @@ public class CarController : MonoBehaviour
         }
     }
 
-    //void WheelEffects()
-    //{
-    //    foreach (var wheel in wheels)
-    //    {
-    //        //var dirtParticleMainSettings = wheel.smokeParticle.main;
-
-    //        if (Input.GetKey(KeyCode.Space) && wheel.axel == Axel.Rear && wheel.wheelCollider.isGrounded == true && carRb.velocity.magnitude >= 10.0f)
-    //        {
-    //            wheel.wheelEffectObj.GetComponentInChildren<TrailRenderer>().emitting = true;
-    //            wheel.smokeParticle.Emit(1);
-    //        }
-    //        else
-    //        {
-    //            wheel.wheelEffectObj.GetComponentInChildren<TrailRenderer>().emitting = false;
-    //        }
-    //    }
-    //}
+    void ResetCar()
+    {
+        carRb.velocity = Vector3.zero;
+        carRb.angularVelocity = Vector3.zero;
+        transform.position = Vector3.zero;
+        transform.rotation = Quaternion.identity;
+        moveInput = 0;
+        steerInput = 0;
+    }
 }

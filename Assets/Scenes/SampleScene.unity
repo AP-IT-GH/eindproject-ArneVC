@@ -1980,7 +1980,7 @@ PrefabInstance:
       addedObject: {fileID: 665389866}
     - targetCorrespondingSourceObject: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 665389872}
+      addedObject: {fileID: 665389879}
   m_SourcePrefab: {fileID: 100100000, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
 --- !u!1 &109248578
 GameObject:
@@ -7948,7 +7948,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.3469503, y: 1.4778923, z: 5.3798285}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &665389872
+--- !u!114 &665389879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7957,11 +7957,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 665389860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 5
-  TakeActionsBetweenDecisions: 1
+  m_BrainParameters:
+    VectorObservationSize: 1
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 01000000
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 0
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1 &670997674
 GameObject:
   m_ObjectHideFlags: 0

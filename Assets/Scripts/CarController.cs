@@ -1,17 +1,13 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-using Unity.MLAgents;
-using Unity.MLAgents.Sensors;
-using Unity.MLAgents.Actuators;
 
-public class CarController : Agent
+public class CarController : MonoBehaviour
 {
     public enum ControlMode
     {
         Keyboard,
-        Buttons,
-        MLAgent
+        Buttons
     };
 
     public enum Axel
@@ -43,67 +39,28 @@ public class CarController : Agent
     float moveInput;
     float steerInput;
 
-    private Rigidbody carRb;
+    public Rigidbody carRb;
 
-    public override void Initialize()
+
+
+    void Start()
     {
         carRb = GetComponent<Rigidbody>();
         carRb.centerOfMass = _centerOfMass;
     }
 
-    public override void OnEpisodeBegin()
-    {
-        ResetCar();
-    }
-
-    public override void CollectObservations(VectorSensor sensor)
-    {
-
-        sensor.AddObservation(moveInput);
-        sensor.AddObservation(steerInput);
-        sensor.AddObservation(carRb.velocity);
-        sensor.AddObservation(transform.position);
-        sensor.AddObservation(transform.rotation);
-
-    }
-
-    public override void OnActionReceived(ActionBuffers actions)
-    {
-
-        moveInput = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
-        steerInput = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
-
-
-        Move();
-        Steer();
-        Brake();
-    }
-
-    public override void Heuristic(in ActionBuffers actionsOut)
-    {
-
-        var continuousActions = actionsOut.ContinuousActions;
-        continuousActions[0] = Input.GetAxis("Vertical"); // throttle
-        continuousActions[1] = Input.GetAxis("Horizontal"); // steer
-    }
-
     void Update()
     {
-        if (control == ControlMode.Keyboard)
-        {
-            GetInputs();
-        }
+        GetInputs();
         AnimateWheels();
+
     }
 
     void LateUpdate()
     {
-        if (control != ControlMode.MLAgent)
-        {
-            Move();
-            Steer();
-            Brake();
-        }
+        Move();
+        Steer();
+        Brake();
     }
 
     public void MoveInput(float input)
@@ -153,6 +110,7 @@ public class CarController : Agent
             {
                 wheel.wheelCollider.brakeTorque = 300 * brakeAcceleration * Time.deltaTime;
             }
+
         }
         else
         {
@@ -160,6 +118,7 @@ public class CarController : Agent
             {
                 wheel.wheelCollider.brakeTorque = 0;
             }
+
         }
     }
 
@@ -175,13 +134,14 @@ public class CarController : Agent
         }
     }
 
-    void ResetCar()
+    public void ResetCar()
     {
         carRb.velocity = Vector3.zero;
         carRb.angularVelocity = Vector3.zero;
-        transform.position = Vector3.zero;
-        transform.rotation = Quaternion.identity;
+        transform.position = Vector3.zero;  // Adjust this position as necessary
+        transform.rotation = Quaternion.identity;  // Adjust this rotation as necessary
         moveInput = 0;
         steerInput = 0;
     }
+
 }

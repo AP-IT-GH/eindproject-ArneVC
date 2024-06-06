@@ -21,8 +21,6 @@ public class CarController : MonoBehaviour
     {
         public GameObject wheelModel;
         public WheelCollider wheelCollider;
-        //public GameObject wheelEffectObj;
-        //public ParticleSystem smokeParticle;
         public Axel axel;
     }
 
@@ -41,7 +39,7 @@ public class CarController : MonoBehaviour
     float moveInput;
     float steerInput;
 
-    private Rigidbody carRb;
+    public Rigidbody carRb;
 
 
 
@@ -55,9 +53,7 @@ public class CarController : MonoBehaviour
     {
         GetInputs();
         AnimateWheels();
-        //Quaternion rotation = transform.rotation;
-        //transform.rotation = Quaternion.Euler(rotation.eulerAngles.x, rotation.eulerAngles.y, 0);
-        //WheelEffects();
+
     }
 
     void LateUpdate()
@@ -138,21 +134,14 @@ public class CarController : MonoBehaviour
         }
     }
 
-    //void WheelEffects()
-    //{
-    //    foreach (var wheel in wheels)
-    //    {
-    //        //var dirtParticleMainSettings = wheel.smokeParticle.main;
+    public void ResetCar()
+    {
+        carRb.velocity = Vector3.zero;
+        carRb.angularVelocity = Vector3.zero;
+        transform.position = Vector3.zero;  // Adjust this position as necessary
+        transform.rotation = Quaternion.identity;  // Adjust this rotation as necessary
+        moveInput = 0;
+        steerInput = 0;
+    }
 
-    //        if (Input.GetKey(KeyCode.Space) && wheel.axel == Axel.Rear && wheel.wheelCollider.isGrounded == true && carRb.velocity.magnitude >= 10.0f)
-    //        {
-    //            wheel.wheelEffectObj.GetComponentInChildren<TrailRenderer>().emitting = true;
-    //            wheel.smokeParticle.Emit(1);
-    //        }
-    //        else
-    //        {
-    //            wheel.wheelEffectObj.GetComponentInChildren<TrailRenderer>().emitting = false;
-    //        }
-    //    }
-    //}
 }

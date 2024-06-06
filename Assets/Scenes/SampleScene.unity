@@ -2127,7 +2127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4922170374542132, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 175.40016
+      value: 175.42
       objectReference: {fileID: 0}
     - target: {fileID: 4922170374542132, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2163,7 +2163,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1167955766144982348, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
       propertyPath: m_Constraints
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110424958288683330, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
+      propertyPath: m_BehaviorType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110424958288683330, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSpaceType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110424958288683330, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110424958288683330, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110424958288683330, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110424958288683330, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.BranchSizes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110424958288683330, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.m_NumContinuousActions
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6674424795303898822, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
       propertyPath: _centerOfMass.y
@@ -2176,6 +2204,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 665389866}
+    - targetCorrespondingSourceObject: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 665389879}
   m_SourcePrefab: {fileID: 100100000, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
 --- !u!1 &109248578
 GameObject:
@@ -8568,6 +8599,36 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.3469503, y: 1.4778923, z: 5.3798285}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &665389879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665389860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 1
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 01000000
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 0
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1 &670997674
 GameObject:
   m_ObjectHideFlags: 0

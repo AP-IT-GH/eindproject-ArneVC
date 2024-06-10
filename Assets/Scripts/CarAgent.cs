@@ -53,40 +53,39 @@ public class CarAgent : Agent
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("checkpoint" + currentCheckpointIndex))
+        for (int i = 0; i < checkpointArray.Length; i++)
         {
-            checkpointArray[currentCheckpointIndex] = true;
-            if(currentCheckpointIndex != 0)
+            if (other.CompareTag("checkpoint" + i))
             {
-                if (checkpointArray[currentCheckpointIndex - 1] == true) //car has gone trough previous checkpoint
+                if (i == currentCheckpointIndex)
                 {
-                    Debug.Log("checkpoint achieved");
-                    int newIndex = IncrementCurrentCheckpointIndex(currentCheckpointIndex);
-                    currentCheckpointIndex = newIndex;
-                    AddReward(1.0f);                    
+                    checkpointArray[i] = true;
+                    AddReward(1.0f);
+                    Debug.Log("Checkpoint " + i + " achieved");
+
+                    currentCheckpointIndex = (currentCheckpointIndex + 1) % checkpointArray.Length;
+
+                    if (currentCheckpointIndex == 0)
+                    {
+                        if (DidTheCarCollectAllCheckpoints())
+                        {
+                            Debug.Log("Car crosses the finish line after completing the course");
+                            AddReward(5.0f);
+                            EndEpisode();
+                        }
+                        else
+                        {
+                            Debug.Log("Car crosses the finish line to start a new lap");
+                        }
+                    }
                 }
                 else
                 {
-                    Debug.Log("checkpoint achieved in the wrong order");
+                    Debug.Log("Checkpoint " + i + " achieved in the wrong order");
+                    AddReward(-1.0f);
                     EndEpisode();
                 }
             }
-            else
-            {
-                if(DidTheCarCollectAllCheckpoints() == true)
-                {
-                    Debug.Log("car crosses the finish line checkpoint again after having ran the whole course");
-                    AddReward(1.0f);
-                    EndEpisode();
-                }
-                else
-                {
-                    Debug.Log("car crosses finish line to start the race");
-                    int newIndex = IncrementCurrentCheckpointIndex(currentCheckpointIndex);
-                    currentCheckpointIndex = newIndex;
-                    AddReward(1.0f);
-                }
-            }            
         }
     }
     private bool DidTheCarCollectAllCheckpoints()

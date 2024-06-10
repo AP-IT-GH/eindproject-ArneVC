@@ -6,6 +6,35 @@ TagManager:
   tags:
   - Anchor
   - checkpoint
+  - checkpoint0
+  - checkpoint1
+  - checkpoint2
+  - checkpoint3
+  - checkpoint4
+  - checkpoint5
+  - checkpoint6
+  - checkpoint7
+  - checkpoint8
+  - checkpoint9
+  - checkpoint10
+  - checkpoint11
+  - checkpoint12
+  - checkpoint13
+  - checkpoint14
+  - checkpoint15
+  - checkpoint16
+  - checkpoint17
+  - checkpoint18
+  - checkpoint19
+  - checkpoint20
+  - checkpoint21
+  - checkpoint22
+  - checkpoint23
+  - checkpoint24
+  - checkpoint25
+  - checkpoint26
+  - checkpoint27
+  - checkpoint28
   layers:
   - Default
   - TransparentFX

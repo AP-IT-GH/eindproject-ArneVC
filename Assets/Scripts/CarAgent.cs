@@ -49,6 +49,8 @@ public class CarAgent : Agent
         var continuousActions = actionsOut.ContinuousActions;
         continuousActions[0] = Input.GetAxis("Vertical"); // throttle
         continuousActions[1] = Input.GetAxis("Horizontal"); // steer
+
+        AddReward(-0.01f); //time penalty, car should try to go as fast as possible
     }
 
     private void OnTriggerEnter(Collider other)

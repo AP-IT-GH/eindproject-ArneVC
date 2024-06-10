@@ -65,7 +65,7 @@ public class CarAgent : Agent
 
                     currentCheckpointIndex = (currentCheckpointIndex + 1) % checkpointArray.Length;
 
-                    if (currentCheckpointIndex == 0)
+                    if (currentCheckpointIndex == 1)
                     {
                         if (DidTheCarCollectAllCheckpoints())
                         {
@@ -85,6 +85,7 @@ public class CarAgent : Agent
                     AddReward(-1.0f);
                     EndEpisode();
                 }
+                return;
             }
         }
     }

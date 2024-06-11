@@ -21,8 +21,6 @@ public class CarController : MonoBehaviour
     {
         public GameObject wheelModel;
         public WheelCollider wheelCollider;
-        //public GameObject wheelEffectObj;
-        //public ParticleSystem smokeParticle;
         public Axel axel;
     }
 
@@ -41,7 +39,7 @@ public class CarController : MonoBehaviour
     float moveInput;
     float steerInput;
 
-    private Rigidbody carRb;
+    public Rigidbody carRb;
 
 
 
@@ -55,7 +53,7 @@ public class CarController : MonoBehaviour
     {
         GetInputs();
         AnimateWheels();
-        //WheelEffects();
+        ResetRotationdrift();
     }
 
     void LateUpdate()
@@ -135,22 +133,26 @@ public class CarController : MonoBehaviour
             wheel.wheelModel.transform.rotation = rot;
         }
     }
+    void ResetRotationdrift()
+    {
+        Quaternion currentRotation = carRb.rotation;
 
-    //void WheelEffects()
-    //{
-    //    foreach (var wheel in wheels)
-    //    {
-    //        //var dirtParticleMainSettings = wheel.smokeParticle.main;
+        Quaternion newRotation = Quaternion.Euler(
+                currentRotation.eulerAngles.x,
+                currentRotation.eulerAngles.y,
+                0f
+        );
+        carRb.MoveRotation(newRotation);
+    }
 
-    //        if (Input.GetKey(KeyCode.Space) && wheel.axel == Axel.Rear && wheel.wheelCollider.isGrounded == true && carRb.velocity.magnitude >= 10.0f)
-    //        {
-    //            wheel.wheelEffectObj.GetComponentInChildren<TrailRenderer>().emitting = true;
-    //            wheel.smokeParticle.Emit(1);
-    //        }
-    //        else
-    //        {
-    //            wheel.wheelEffectObj.GetComponentInChildren<TrailRenderer>().emitting = false;
-    //        }
-    //    }
-    //}
+    public void ResetCar()
+    {
+        carRb.velocity = Vector3.zero;
+        carRb.angularVelocity = Vector3.zero;
+        transform.position = new Vector3(-84.68f, 1.7f, 90.63f);  // Adjust this position as necessary
+        transform.rotation = Quaternion.Euler(1.532f, 89.656f, 0f);  // Adjust this rotation as necessary
+        moveInput = 0;
+        steerInput = 0;
+    }
+
 }

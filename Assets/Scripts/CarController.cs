@@ -138,8 +138,8 @@ public class CarController : MonoBehaviour
     {
         carRb.velocity = Vector3.zero;
         carRb.angularVelocity = Vector3.zero;
-        transform.position = Vector3.zero;  // Adjust this position as necessary
-        transform.rotation = Quaternion.identity;  // Adjust this rotation as necessary
+        transform.position = Vector3.zero;
+        transform.rotation = Quaternion.identity;
         moveInput = 0;
         steerInput = 0;
     }

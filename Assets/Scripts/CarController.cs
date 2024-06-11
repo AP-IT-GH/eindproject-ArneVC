@@ -53,7 +53,7 @@ public class CarController : MonoBehaviour
     {
         GetInputs();
         AnimateWheels();
-
+        ResetRotationdrift();
     }
 
     void LateUpdate()
@@ -133,13 +133,24 @@ public class CarController : MonoBehaviour
             wheel.wheelModel.transform.rotation = rot;
         }
     }
+    void ResetRotationdrift()
+    {
+        Quaternion currentRotation = carRb.rotation;
+
+        Quaternion newRotation = Quaternion.Euler(
+                currentRotation.eulerAngles.x,
+                currentRotation.eulerAngles.y,
+                0f
+        );
+        carRb.MoveRotation(newRotation);
+    }
 
     public void ResetCar()
     {
         carRb.velocity = Vector3.zero;
         carRb.angularVelocity = Vector3.zero;
-        transform.position = Vector3.zero;  // Adjust this position as necessary
-        transform.rotation = Quaternion.identity;  // Adjust this rotation as necessary
+        transform.position = new Vector3(-84.68f, 1.7f, 90.63f);  // Adjust this position as necessary
+        transform.rotation = Quaternion.Euler(1.532f, 89.656f, 0f);  // Adjust this rotation as necessary
         moveInput = 0;
         steerInput = 0;
     }

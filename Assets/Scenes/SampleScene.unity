@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 13130599}
   - component: {fileID: 13130601}
   - component: {fileID: 13130600}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (24)
   m_TagString: checkpoint24
   m_Icon: {fileID: 0}
@@ -843,7 +843,7 @@ GameObject:
   - component: {fileID: 39928045}
   - component: {fileID: 39928047}
   - component: {fileID: 39928046}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (12)
   m_TagString: checkpoint12
   m_Icon: {fileID: 0}
@@ -1714,7 +1714,7 @@ GameObject:
   - component: {fileID: 78527560}
   - component: {fileID: 78527562}
   - component: {fileID: 78527561}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (10)
   m_TagString: checkpoint10
   m_Icon: {fileID: 0}
@@ -2216,6 +2216,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 665389885}
+    - targetCorrespondingSourceObject: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 665389889}
   m_SourcePrefab: {fileID: 100100000, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
 --- !u!114 &101022244 stripped
 MonoBehaviour:
@@ -2440,7 +2443,7 @@ GameObject:
   - component: {fileID: 124514473}
   - component: {fileID: 124514475}
   - component: {fileID: 124514474}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (21)
   m_TagString: checkpoint21
   m_Icon: {fileID: 0}
@@ -2708,7 +2711,7 @@ GameObject:
   - component: {fileID: 132268534}
   - component: {fileID: 132268536}
   - component: {fileID: 132268535}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (26)
   m_TagString: checkpoint26
   m_Icon: {fileID: 0}
@@ -4200,7 +4203,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 987883019}
   - {fileID: 1340231007}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4550,7 +4552,7 @@ GameObject:
   - component: {fileID: 283893660}
   - component: {fileID: 283893662}
   - component: {fileID: 283893661}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (18)
   m_TagString: checkpoint18
   m_Icon: {fileID: 0}
@@ -5153,7 +5155,7 @@ GameObject:
   - component: {fileID: 340099743}
   - component: {fileID: 340099745}
   - component: {fileID: 340099744}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (15)
   m_TagString: checkpoint15
   m_Icon: {fileID: 0}
@@ -8327,7 +8329,7 @@ GameObject:
   - component: {fileID: 625945739}
   - component: {fileID: 625945741}
   - component: {fileID: 625945740}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (27)
   m_TagString: checkpoint27
   m_Icon: {fileID: 0}
@@ -8757,7 +8759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 11
+    VectorObservationSize: 10
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -8789,7 +8791,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
+  MaxStep: 5000
   carController: {fileID: 101022244}
 --- !u!4 &665389884 stripped
 Transform:
@@ -8816,12 +8818,26 @@ MonoBehaviour:
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967291
+    m_Bits: 4294967259
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
   m_StartVerticalOffset: 0
   m_EndVerticalOffset: 0
+--- !u!114 &665389889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665389860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
 --- !u!1 &670997674
 GameObject:
   m_ObjectHideFlags: 0
@@ -10546,7 +10562,7 @@ GameObject:
   - component: {fileID: 865141608}
   - component: {fileID: 865141610}
   - component: {fileID: 865141609}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (6)
   m_TagString: checkpoint6
   m_Icon: {fileID: 0}
@@ -11080,7 +11096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 912609935}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11343,7 +11359,7 @@ GameObject:
   - component: {fileID: 934118784}
   - component: {fileID: 934118786}
   - component: {fileID: 934118785}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (9)
   m_TagString: checkpoint9
   m_Icon: {fileID: 0}
@@ -11745,7 +11761,7 @@ GameObject:
   - component: {fileID: 982016845}
   - component: {fileID: 982016847}
   - component: {fileID: 982016846}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (11)
   m_TagString: checkpoint11
   m_Icon: {fileID: 0}
@@ -12549,7 +12565,7 @@ GameObject:
   - component: {fileID: 1069794631}
   - component: {fileID: 1069794633}
   - component: {fileID: 1069794632}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (8)
   m_TagString: checkpoint8
   m_Icon: {fileID: 0}
@@ -13950,7 +13966,7 @@ GameObject:
   - component: {fileID: 1161467977}
   - component: {fileID: 1161467979}
   - component: {fileID: 1161467978}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (20)
   m_TagString: checkpoint20
   m_Icon: {fileID: 0}
@@ -14151,7 +14167,7 @@ GameObject:
   - component: {fileID: 1185436658}
   - component: {fileID: 1185436660}
   - component: {fileID: 1185436659}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (7)
   m_TagString: checkpoint7
   m_Icon: {fileID: 0}
@@ -14419,7 +14435,7 @@ GameObject:
   - component: {fileID: 1222480799}
   - component: {fileID: 1222480801}
   - component: {fileID: 1222480800}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (17)
   m_TagString: checkpoint17
   m_Icon: {fileID: 0}
@@ -14553,7 +14569,7 @@ GameObject:
   - component: {fileID: 1229394707}
   - component: {fileID: 1229394709}
   - component: {fileID: 1229394708}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (22)
   m_TagString: checkpoint22
   m_Icon: {fileID: 0}
@@ -14687,7 +14703,7 @@ GameObject:
   - component: {fileID: 1233448878}
   - component: {fileID: 1233448880}
   - component: {fileID: 1233448879}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (4)
   m_TagString: checkpoint4
   m_Icon: {fileID: 0}
@@ -15290,7 +15306,7 @@ GameObject:
   - component: {fileID: 1295456952}
   - component: {fileID: 1295456954}
   - component: {fileID: 1295456953}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (3)
   m_TagString: checkpoint3
   m_Icon: {fileID: 0}
@@ -16031,7 +16047,7 @@ GameObject:
   - component: {fileID: 1355094643}
   - component: {fileID: 1355094645}
   - component: {fileID: 1355094644}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (28)
   m_TagString: checkpoint28
   m_Icon: {fileID: 0}
@@ -16366,7 +16382,7 @@ GameObject:
   - component: {fileID: 1390452617}
   - component: {fileID: 1390452618}
   - component: {fileID: 1390452619}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint
   m_TagString: checkpoint0
   m_Icon: {fileID: 0}
@@ -17438,7 +17454,7 @@ GameObject:
   - component: {fileID: 1496627734}
   - component: {fileID: 1496627736}
   - component: {fileID: 1496627735}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (16)
   m_TagString: checkpoint16
   m_Icon: {fileID: 0}
@@ -17773,7 +17789,7 @@ GameObject:
   - component: {fileID: 1520205963}
   - component: {fileID: 1520205965}
   - component: {fileID: 1520205964}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (14)
   m_TagString: checkpoint14
   m_Icon: {fileID: 0}
@@ -18115,7 +18131,7 @@ GameObject:
   - component: {fileID: 1547635850}
   - component: {fileID: 1547635852}
   - component: {fileID: 1547635851}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (23)
   m_TagString: checkpoint23
   m_Icon: {fileID: 0}
@@ -19162,7 +19178,7 @@ GameObject:
   - component: {fileID: 1631952675}
   - component: {fileID: 1631952677}
   - component: {fileID: 1631952676}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (19)
   m_TagString: checkpoint19
   m_Icon: {fileID: 0}
@@ -20971,7 +20987,7 @@ GameObject:
   - component: {fileID: 1749872152}
   - component: {fileID: 1749872154}
   - component: {fileID: 1749872153}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (5)
   m_TagString: checkpoint5
   m_Icon: {fileID: 0}
@@ -22272,7 +22288,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.03636859, z: -0, w: 0.99933845}
   m_LocalPosition: {x: -0.5043, y: 0.01, z: 0.1588}
-  m_LocalScale: {x: -0.17506096, y: 0.01, z: 0.005000001}
+  m_LocalScale: {x: 0.175061, y: 0.01, z: 0.005000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 805065573}
@@ -23232,7 +23248,7 @@ GameObject:
   - component: {fileID: 1968994798}
   - component: {fileID: 1968994800}
   - component: {fileID: 1968994799}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (1)
   m_TagString: checkpoint1
   m_Icon: {fileID: 0}
@@ -23539,7 +23555,7 @@ GameObject:
   - component: {fileID: 1988534862}
   - component: {fileID: 1988534864}
   - component: {fileID: 1988534863}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (2)
   m_TagString: checkpoint2
   m_Icon: {fileID: 0}
@@ -23941,7 +23957,7 @@ GameObject:
   - component: {fileID: 2015811739}
   - component: {fileID: 2015811741}
   - component: {fileID: 2015811740}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (25)
   m_TagString: checkpoint25
   m_Icon: {fileID: 0}
@@ -25281,7 +25297,7 @@ GameObject:
   - component: {fileID: 2121902373}
   - component: {fileID: 2121902375}
   - component: {fileID: 2121902374}
-  m_Layer: 2
+  m_Layer: 1
   m_Name: Checkpoint (13)
   m_TagString: checkpoint13
   m_Icon: {fileID: 0}
@@ -25346,3 +25362,5 @@ SceneRoots:
   - {fileID: 714725028}
   - {fileID: 1766105725}
   - {fileID: 101022243}
+  - {fileID: 1832187137}
+  - {fileID: 253433133}

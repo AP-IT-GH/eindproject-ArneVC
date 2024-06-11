@@ -37,6 +37,7 @@ public class CarAgent : Agent
 
         carController.MoveInput(moveInput);
         carController.SteerInput(steerInput);
+        AddReward(-0.001f);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -45,7 +46,7 @@ public class CarAgent : Agent
         continuousActions[0] = Input.GetAxis("Vertical"); // throttle
         continuousActions[1] = Input.GetAxis("Horizontal"); // steer
 
-        AddReward(-0.01f); // Time penalty, encourage the car to move faster
+        //AddReward(-0.01f); // Time penalty, encourage the car to move faster
     }
 
     private void OnTriggerEnter(Collider other)

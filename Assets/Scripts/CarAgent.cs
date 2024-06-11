@@ -37,7 +37,10 @@ public class CarAgent : Agent
 
         carController.MoveInput(moveInput);
         carController.SteerInput(steerInput);
-        AddReward(-0.001f);
+        if (moveInput < 0)
+        {
+            AddReward(-0.001f);
+        }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -54,7 +57,7 @@ public class CarAgent : Agent
         if (other.CompareTag("checkpoint" + currentCheckpointIndex))
         {
             checkpointArray[currentCheckpointIndex] = true;
-            AddReward(1.0f);
+            AddReward(0.1f);
             Debug.Log("Checkpoint " + currentCheckpointIndex + " achieved");
             lastCheckpointTime = Time.time;
 
@@ -86,6 +89,7 @@ public class CarAgent : Agent
         if (Time.time - lastCheckpointTime > 60f) // If more than a minute passed since the last checkpoint
         {
             Debug.Log("Time out! More than a minute passed since the last checkpoint.");
+            AddReward(-0.05f);
             EndEpisode();
         }
     }

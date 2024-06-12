@@ -9,7 +9,8 @@ public class CarAgent : Agent
     private bool[] checkpointArray = new bool[29];
     private int currentCheckpointIndex = 0;
     private float lastCheckpointTime;
-
+    private Vector3 lastPosition;
+    float timeSinceLastCheck;
     public override void Initialize()
     {
         carController = GetComponent<CarController>();
@@ -21,6 +22,8 @@ public class CarAgent : Agent
         checkpointArray = new bool[29];
         currentCheckpointIndex = 0;
         lastCheckpointTime = Time.time;
+        lastPosition = carController.transform.position;
+        timeSinceLastCheck = 0f;
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -37,16 +40,17 @@ public class CarAgent : Agent
 
         carController.MoveInput(moveInput);
         carController.SteerInput(steerInput);
-        if (moveInput < 0)
+        if (moveInput >= -0.1)
         {
             AddReward(-0.001f);
         }
+        
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         var continuousActions = actionsOut.ContinuousActions;
-        continuousActions[0] = Input.GetAxis("Vertical"); // throttle
+        continuousActions[0] = -Input.GetAxis("Vertical"); // throttle
         continuousActions[1] = Input.GetAxis("Horizontal"); // steer
 
         //AddReward(-0.01f); // Time penalty, encourage the car to move faster
@@ -57,7 +61,7 @@ public class CarAgent : Agent
         if (other.CompareTag("checkpoint" + currentCheckpointIndex))
         {
             checkpointArray[currentCheckpointIndex] = true;
-            AddReward(0.1f);
+            AddReward(1f);
             Debug.Log("Checkpoint " + currentCheckpointIndex + " achieved");
             lastCheckpointTime = Time.time;
 
@@ -89,8 +93,24 @@ public class CarAgent : Agent
         if (Time.time - lastCheckpointTime > 60f) // If more than a minute passed since the last checkpoint
         {
             Debug.Log("Time out! More than a minute passed since the last checkpoint.");
-            AddReward(-0.05f);
+            AddReward(-0.5f);
             EndEpisode();
         }
+        
+        timeSinceLastCheck += Time.deltaTime;
+        if (timeSinceLastCheck > 3f)
+        {
+            float distanceMoved = Vector3.Distance(carController.transform.position, lastPosition);
+            if (distanceMoved <= 0.1f)
+            {
+                Debug.Log("Time out! Car is stuck.");
+                AddReward(-0.5f);
+                timeSinceLastCheck = 0f;
+                EndEpisode();
+            }
+            timeSinceLastCheck = 0f;
+            lastPosition = carController.transform.position;
+        }
+        
     }
 }

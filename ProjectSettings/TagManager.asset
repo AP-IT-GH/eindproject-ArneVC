@@ -34,6 +34,7 @@ TagManager:
   - checkpoint26
   - checkpoint27
   - checkpoint28
+  - invBarrier
   layers:
   - Default
   - TransparentFX

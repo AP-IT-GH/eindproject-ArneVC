@@ -74,6 +74,10 @@ public class CarAgent : Agent
                 EndEpisode();
             }
         }
+        if (other.CompareTag("invBarrier"))
+        {
+            SetReward(-0.1f);
+        }
     }
 
     private bool DidTheCarCollectAllCheckpoints()

@@ -104,7 +104,7 @@ public class CarAgent : Agent
             if (distanceMoved <= 0.1f)
             {
                 Debug.Log("Time out! Car is stuck.");
-                AddReward(-0.5f);
+                AddReward(-1f);
                 timeSinceLastCheck = 0f;
                 EndEpisode();
             }

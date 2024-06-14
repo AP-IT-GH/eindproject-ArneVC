@@ -17,4 +17,20 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Selected: " + selectedCar.name);
     }
+    private GameObject ReturnCorrectPlayerCarPrefabBySelectedCarName(string carName)
+    {
+        switch (carName)
+        {
+            case "BlackCar":
+                return BlackCarPrefab;
+            case "RedCar":
+                return RedCarPrefab;
+            case "BlueCar":
+                return BlueCarPrefab;
+            case "YellowCar":
+                return YellowCarPrefab;
+            default:
+                return BlackCarPrefab;
+        }
+    }
 }

@@ -14907,11 +14907,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2044594450}
+      insertIndex: 3
+      addedObject: {fileID: 2044594451}
     - targetCorrespondingSourceObject: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2044594451}
+      addedObject: {fileID: 2044594450}
   m_SourcePrefab: {fileID: 100100000, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
 --- !u!1 &1435671362
 GameObject:
@@ -22100,7 +22100,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2044594435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f13d813fc854e4d8817e98d745d8d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a9993daa5eea4641921f216c8dde498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 1715847029}

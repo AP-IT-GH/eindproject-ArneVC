@@ -35,9 +35,9 @@ public class CarAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float moveInput = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
+        //float moveInput = Mathf.Clamp(actions.ContinuousActions[0], -1f, 0f);
         float steerInput = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
-
+        float moveInput = -1.0f;
         carController.MoveInput(moveInput);
         carController.SteerInput(steerInput);
         if (moveInput >= -0.1)
@@ -74,9 +74,14 @@ public class CarAgent : Agent
                 EndEpisode();
             }
         }
-        if (other.CompareTag("invBarrier"))
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("invBarrier"))
         {
-            SetReward(-0.1f);
+            SetReward(-1f);
+            Debug.Log("Car touched wall");
+            EndEpisode();
         }
     }
 

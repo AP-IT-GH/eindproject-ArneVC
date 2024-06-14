@@ -5,11 +5,18 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CarInteraction : XRBaseInteractable
 {
+    private GameManager gameManager;
     protected override void OnEnable()
     {
         base.OnEnable();
         hoverEntered.AddListener(OnHover);
         selectEntered.AddListener(OnGrab);
+
+        gameManager = FindObjectOfType<GameManager>();
+        if (gameManager == null)
+        {
+            Debug.LogError("GameManager not found");
+        }
     }
 
     protected override void OnDisable()
@@ -21,11 +28,17 @@ public class CarInteraction : XRBaseInteractable
 
     private void OnHover(HoverEnterEventArgs args)
     {
-        Debug.Log("Hovered over: " + gameObject.name);
+        if(gameManager != null)
+        {
+            gameManager.CarHover(gameObject);
+        }
     }
 
     private void OnGrab(SelectEnterEventArgs args)
     {
-        Debug.Log("Selected: " + gameObject.name);
+        if (gameManager != null)
+        {
+            gameManager.CarSelect(gameObject);
+        }
     }
 }

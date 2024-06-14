@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void CarHover(GameObject hoveredCar)
     {
-        
+        Debug.Log("Hovered over: " + hoveredCar.name);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void CarSelect(GameObject selectedCar)
     {
-        
+        Debug.Log("Selected: " + selectedCar.name);
     }
 }

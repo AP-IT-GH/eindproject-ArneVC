@@ -2,7 +2,7 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
-
+using System.IO; 
 public class CarAgent : Agent
 {
     public CarController carController;
@@ -10,7 +10,7 @@ public class CarAgent : Agent
     private int currentCheckpointIndex = 0;
     private float lastCheckpointTime;
     private Vector3 lastPosition;
-    float timeSinceLastCheck;
+    private float timeSinceLastCheck;
     public override void Initialize()
     {
         carController = GetComponent<CarController>();
@@ -50,10 +50,19 @@ public class CarAgent : Agent
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         var continuousActions = actionsOut.ContinuousActions;
-        continuousActions[0] = -Input.GetAxis("Vertical"); // throttle
-        continuousActions[1] = Input.GetAxis("Horizontal"); // steer
+        float throttle = -Input.GetAxis("Vertical"); // throttle
+        float steer = Input.GetAxis("Horizontal"); // steer
+        throttle = -1.0f;
 
+        continuousActions[0] = throttle;
+        continuousActions[1] = steer;
         //AddReward(-0.01f); // Time penalty, encourage the car to move faster
+        Vector3 position = carController.transform.position;
+        Quaternion rotation = carController.transform.rotation;
+        Vector3 velocity = carController.carRb.velocity;
+
+        LogData(position, rotation, velocity, steer, throttle);
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -121,5 +130,26 @@ public class CarAgent : Agent
             lastPosition = carController.transform.position;
         }
         
+    }
+    private void LogData(Vector3 position, Quaternion rotation, Vector3 velocity, float steer, float throttle)
+    {
+        // Specify the file path
+        string directoryPath = Path.Combine(Application.dataPath, "ImitationData/");
+        string filePath = Path.Combine(directoryPath, "training_data.csv");
+
+        // Ensure the directory exists
+        if (!Directory.Exists(directoryPath))
+        {
+            Directory.CreateDirectory(directoryPath);
+        }
+
+        // Format the data to be logged
+        string data = $"{position.x},{position.y},{position.z}," +
+                      $"{rotation.x},{rotation.y},{rotation.z},{rotation.w}," +
+                      $"{velocity.x},{velocity.y},{velocity.z}," +
+                      $"{steer},{throttle},\n";
+
+        // Append the data to the CSV file
+        File.AppendAllText(filePath, data);
     }
 }

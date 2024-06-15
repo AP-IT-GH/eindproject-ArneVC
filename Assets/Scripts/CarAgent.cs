@@ -35,25 +35,47 @@ public class CarAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        //float moveInput = Mathf.Clamp(actions.ContinuousActions[0], -1f, 0f);
-        float steerInput = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
-        float moveInput = -1.0f;
-        carController.MoveInput(moveInput);
-        carController.SteerInput(steerInput);
-        if (moveInput >= -0.1)
+
+        float moveInput = 0f;
+        float steerInput = 0f;
+
+        switch (actions.DiscreteActions[0])
         {
-            AddReward(-0.001f);
+            case 0: moveInput = 0f;
+                break;
+            case 1: moveInput = -1f;
+                break;
         }
-        
+
+        switch(actions.DiscreteActions[1]) {
+            case 0:
+                steerInput = 0f;
+                break;
+            case 1:
+                steerInput = 1f;
+                break;
+            case 2:
+                steerInput = -1f;
+                break;
+        }
+
+
+        carController.GetInputs(moveInput, steerInput);
+
+
+        if(moveInput == 0)
+        {
+            AddReward(-0.01f);
+        }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
+ 
         var continuousActions = actionsOut.ContinuousActions;
         continuousActions[0] = -Input.GetAxis("Vertical"); // throttle
         continuousActions[1] = Input.GetAxis("Horizontal"); // steer
 
-        //AddReward(-0.01f); // Time penalty, encourage the car to move faster
     }
 
     private void OnTriggerEnter(Collider other)
@@ -79,9 +101,18 @@ public class CarAgent : Agent
     {
         if (collision.gameObject.CompareTag("invBarrier"))
         {
-            SetReward(-1f);
+            SetReward(-0.5f);
             Debug.Log("Car touched wall");
             EndEpisode();
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("invBarrier"))
+        {
+            SetReward(-0.5f);
+            Debug.Log("still touching wall");
         }
     }
 

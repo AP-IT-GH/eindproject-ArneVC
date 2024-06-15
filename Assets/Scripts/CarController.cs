@@ -36,8 +36,8 @@ public class CarController : MonoBehaviour
 
     public List<Wheel> wheels;
 
-    float moveInput;
-    float steerInput;
+    float moveCar;
+    float steerCar;
 
     public Rigidbody carRb;
 
@@ -63,22 +63,29 @@ public class CarController : MonoBehaviour
         Brake();
     }
 
-    public void MoveInput(float input)
-    {
-        moveInput = input;
-    }
+    //public void MoveInput(float input)
+    //{
+    //    moveCar = input;
+    //}
 
-    public void SteerInput(float input)
+    //public void SteerInput(float input)
+    //{
+    //    steerCar = input;
+    //}
+
+    public void GetInputs(float moveInput, float steerInput)
     {
-        steerInput = input;
+        moveCar = moveInput;
+        steerCar = steerInput;
+        
     }
 
     void GetInputs()
     {
         if (control == ControlMode.Keyboard)
         {
-            moveInput = Input.GetAxis("Vertical");
-            steerInput = Input.GetAxis("Horizontal");
+            moveCar = Input.GetAxis("Vertical");
+            steerCar = Input.GetAxis("Horizontal");
         }
     }
 
@@ -86,7 +93,7 @@ public class CarController : MonoBehaviour
     {
         foreach (var wheel in wheels)
         {
-            wheel.wheelCollider.motorTorque = moveInput * 600 * maxAcceleration * Time.deltaTime;
+            wheel.wheelCollider.motorTorque = moveCar * 600 * maxAcceleration * Time.deltaTime;
         }
     }
 
@@ -96,7 +103,7 @@ public class CarController : MonoBehaviour
         {
             if (wheel.axel == Axel.Front)
             {
-                var _steerAngle = steerInput * turnSensitivity * maxSteerAngle;
+                var _steerAngle = steerCar * turnSensitivity * maxSteerAngle;
                 wheel.wheelCollider.steerAngle = Mathf.Lerp(wheel.wheelCollider.steerAngle, _steerAngle, 0.6f);
             }
         }
@@ -104,7 +111,7 @@ public class CarController : MonoBehaviour
 
     void Brake()
     {
-        if (Input.GetKey(KeyCode.Space) || moveInput == 0)
+        if (Input.GetKey(KeyCode.Space) || moveCar == 0)
         {
             foreach (var wheel in wheels)
             {
@@ -151,8 +158,8 @@ public class CarController : MonoBehaviour
         carRb.angularVelocity = Vector3.zero;
         transform.position = new Vector3(-84.68f, 1.7f, 90.63f);  // Adjust this position as necessary
         transform.rotation = Quaternion.Euler(1.532f, 89.656f, 0f);  // Adjust this rotation as necessary
-        moveInput = 0;
-        steerInput = 0;
+        moveCar = 0;
+        steerCar = 0;
     }
 
 }

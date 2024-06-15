@@ -23,6 +23,18 @@ public class GameManager : MonoBehaviour
         Debug.Log("Selected: " + selectedCar.name);
         SpawnAiCar();
     }
+    public void SpawnPlayerCar(string carName)
+    {
+        GameObject PlayerCar = Instantiate(ReturnCorrectPlayerCarPrefabBySelectedCarName(carName), new Vector3(-84.68f, 1.7f, 90.63f), Quaternion.Euler(1.532f, 89.656f, 0f));
+    }
+    private void SpawnAiCar()
+    {
+        GameObject AICar = Instantiate(AICarPrefab, new Vector3(-84.68f, 1.7f, 90.63f), Quaternion.Euler(1.532f, 89.656f, 0f));
+    }
+    private void ResetScene()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
     private GameObject ReturnCorrectPlayerCarPrefabBySelectedCarName(string carName)
     {
         switch (carName)
@@ -38,13 +50,5 @@ public class GameManager : MonoBehaviour
             default:
                 return BlackCarPrefab;
         }
-    }
-    private void SpawnAiCar()
-    {
-        GameObject AICar = Instantiate(AICarPrefab, new Vector3(-84.68f, 1.7f, 90.63f), Quaternion.identity);
-    }
-    private void ResetScene()
-    {
-        SceneManager.LoadScene("SampleScene");
     }
 }

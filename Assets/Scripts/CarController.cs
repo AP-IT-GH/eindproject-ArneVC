@@ -5,6 +5,7 @@ using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using UnityEngine.XR.Interaction.Toolkit.UI;
+using UnityEngine.EventSystems;
 
 
 public class CarController : MonoBehaviour
@@ -87,6 +88,25 @@ public class CarController : MonoBehaviour
         {
             moveInput = Input.GetAxis("Vertical");
             steerInput = Input.GetAxis("Horizontal");
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.I))
+            {
+                moveInput = -1;
+            }
+            if (Input.GetKey(KeyCode.K))
+            {
+                moveInput += 1;
+            }
+            if (Input.GetKey(KeyCode.J))
+            {
+                steerInput += -1;
+            }
+            if (Input.GetKey(KeyCode.L))
+            {
+                steerInput += 1;
+            }
         }
     }
 

@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Selected: " + selectedCar.name);
         SpawnAiCar();
+        SpawnPlayerCar(selectedCar.name);
     }
     public void SpawnPlayerCar(string carName)
     {

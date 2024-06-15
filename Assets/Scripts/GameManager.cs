@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Hovered over: " + hoveredCar.name);
     }
+    public void CarHoverExit(GameObject hoveredCar)
+    {
+        Debug.Log("Stopped hovering over: " + hoveredCar.name);
+    }
     public void CarSelect(GameObject selectedCar)
     {
         Debug.Log("Selected: " + selectedCar.name);

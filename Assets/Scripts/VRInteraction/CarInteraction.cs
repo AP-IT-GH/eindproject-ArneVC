@@ -10,6 +10,7 @@ public class CarInteraction : XRBaseInteractable
     {
         base.OnEnable();
         hoverEntered.AddListener(OnHover);
+        hoverExited.AddListener(OnHoverExited);
         selectEntered.AddListener(OnGrab);
 
         gameManager = FindObjectOfType<GameManager>();
@@ -31,6 +32,13 @@ public class CarInteraction : XRBaseInteractable
         if(gameManager != null)
         {
             gameManager.CarHover(gameObject);
+        }
+    }
+    private void OnHoverExited(HoverExitEventArgs args)
+    {
+        if (gameManager != null)
+        {
+            gameManager.CarHoverExit(gameObject);
         }
     }
 

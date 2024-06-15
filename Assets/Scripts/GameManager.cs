@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject PlayerXrRig;
     public GameObject BlackCarPrefab;
     public GameObject RedCarPrefab;
     public GameObject BlueCarPrefab;

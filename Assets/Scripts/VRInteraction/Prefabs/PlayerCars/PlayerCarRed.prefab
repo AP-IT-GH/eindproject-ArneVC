@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5193965050699796055}
   - component: {fileID: 2434979092479910688}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3206127746789154622}
   - component: {fileID: 7071311384030476279}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 6825965246090868527}
   - component: {fileID: 4305616496758972384}
   - component: {fileID: 5749143090675173623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8135519943811524571}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7760354965765702702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WHEELS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 8174152644080409880}
   - component: {fileID: 612561268791291814}
   - component: {fileID: 1121942528840200062}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerCarRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 2083803609561082047}
   - component: {fileID: 1543036975823714438}
   - component: {fileID: 481824863793073171}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 615564356611790811}
   - component: {fileID: 6337222537591976369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6992529662580672311}
   - component: {fileID: 4544100427685585047}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -697,7 +697,7 @@ GameObject:
   - component: {fileID: 6097851388961817555}
   - component: {fileID: 7641095327363510184}
   - component: {fileID: 6993587403670003417}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4971296456840899916}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 3780282923811927875}
   - component: {fileID: 3390641524560686848}
   - component: {fileID: 1606239555364031800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}

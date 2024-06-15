@@ -9,6 +9,11 @@ public class Followcar : MonoBehaviour
     public Vector3 rotationOffset; // Offset from the car's rotation
     void Start()
     {
+        //make player child of car
+        transform.SetParent(car.transform);
+
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
         // Remove all colliders
         Collider[] colliders = GetComponentsInChildren<Collider>();
         foreach (Collider col in colliders)
@@ -28,7 +33,7 @@ public class Followcar : MonoBehaviour
         if (car != null)
         {
             // Update position
-            transform.position = car.position + car.TransformVector(positionOffset);
+            transform.position = car.position + positionOffset;
             // Update rotation
             transform.rotation = car.rotation * Quaternion.Euler(rotationOffset);
         }

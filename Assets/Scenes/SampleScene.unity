@@ -13597,7 +13597,7 @@ MonoBehaviour:
   RedCarPrefab: {fileID: 0}
   BlueCarPrefab: {fileID: 0}
   YellowCarPrefab: {fileID: 0}
-  AICarPrefab: {fileID: 0}
+  AICarPrefab: {fileID: 4892243712440591227, guid: 847f0a840bd6dc941b078b1bb2165208, type: 3}
 --- !u!1 &1245444114
 GameObject:
   m_ObjectHideFlags: 0

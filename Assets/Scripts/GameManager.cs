@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public void CarSelect(GameObject selectedCar)
     {
         Debug.Log("Selected: " + selectedCar.name);
+        SpawnAiCar();
     }
     private GameObject ReturnCorrectPlayerCarPrefabBySelectedCarName(string carName)
     {
@@ -37,6 +38,10 @@ public class GameManager : MonoBehaviour
             default:
                 return BlackCarPrefab;
         }
+    }
+    private void SpawnAiCar()
+    {
+        GameObject AICar = Instantiate(AICarPrefab, new Vector3(-84.68f, 1.7f, 90.63f), Quaternion.identity);
     }
     private void ResetScene()
     {

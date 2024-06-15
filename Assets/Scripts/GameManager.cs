@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject BlueCarPrefab;
     public GameObject YellowCarPrefab;
     public GameObject AICarPrefab;
+    
+    private  Followcar FollowCarScript;
     public void CarHover(GameObject hoveredCar)
     {
         Debug.Log("Hovered over: " + hoveredCar.name);
@@ -28,6 +30,8 @@ public class GameManager : MonoBehaviour
     public void SpawnPlayerCar(string carName)
     {
         GameObject PlayerCar = Instantiate(ReturnCorrectPlayerCarPrefabBySelectedCarName(carName), new Vector3(-84.68f, 1.7f, 90.63f), Quaternion.Euler(1.532f, 89.656f, 0f));
+        FollowCarScript = PlayerXrRig.AddComponent<Followcar>();
+        FollowCarScript.car = PlayerCar.transform;
     }
     private void SpawnAiCar()
     {

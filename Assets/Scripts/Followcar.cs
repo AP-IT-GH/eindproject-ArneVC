@@ -23,14 +23,14 @@ public class Followcar : MonoBehaviour
             Destroy(rb);
         }
     }
-    // void LateUpdate()
-    // {
-    //     if (car != null)
-    //     {
-    //         // Update position
-    //         transform.position = car.position + car.TransformVector(positionOffset);
-    //         // Update rotation
-    //         transform.rotation = car.rotation * Quaternion.Euler(rotationOffset);
-    //     }
-    // }
+    void LateUpdate()
+    {
+        if (car != null)
+        {
+            // Update position
+            transform.position = car.position + car.TransformVector(positionOffset);
+            // Update rotation
+            transform.rotation = car.rotation * Quaternion.Euler(rotationOffset);
+        }
+    }
 }

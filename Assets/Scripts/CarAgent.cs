@@ -44,7 +44,7 @@ public class CarAgent : Agent
         float moveInput = -1.0f;
         carController.MoveInput(moveInput);
         carController.SteerInput(steerInput);
-        if (moveInput >= -0.1)
+        if (moveInput >= -0.1f)
         {
             AddReward(-0.001f);
         }

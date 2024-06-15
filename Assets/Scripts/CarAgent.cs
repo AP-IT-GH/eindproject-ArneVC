@@ -3,23 +3,27 @@ using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using System.IO; 
+using Unity.MLAgents.Demonstrations;
 public class CarAgent : Agent
 {
     public CarController carController;
-    private bool[] checkpointArray = new bool[29];
+    private bool[] checkpointArray = new bool[126];
     private int currentCheckpointIndex = 0;
     private float lastCheckpointTime;
     private Vector3 lastPosition;
     private float timeSinceLastCheck;
+    private DemonstrationRecorder recorder;
     public override void Initialize()
     {
         carController = GetComponent<CarController>();
+        recorder = FindObjectOfType<DemonstrationRecorder>();
+        recorder.Record = true;
     }
 
     public override void OnEpisodeBegin()
     {
         carController.ResetCar();
-        checkpointArray = new bool[29];
+        checkpointArray = new bool[126];
         currentCheckpointIndex = 0;
         lastCheckpointTime = Time.time;
         lastPosition = carController.transform.position;
@@ -35,8 +39,8 @@ public class CarAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        //float moveInput = Mathf.Clamp(actions.ContinuousActions[0], -1f, 0f);
-        float steerInput = Mathf.Clamp(actions.ContinuousActions[1], -1f, 1f);
+        //float moveInput = Mathf.Clamp(actions.ContinuousActions[1], -1f, 0f);
+        float steerInput = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
         float moveInput = -1.0f;
         carController.MoveInput(moveInput);
         carController.SteerInput(steerInput);
@@ -54,8 +58,8 @@ public class CarAgent : Agent
         float steer = Input.GetAxis("Horizontal"); // steer
         throttle = -1.0f;
 
-        continuousActions[0] = throttle;
-        continuousActions[1] = steer;
+        continuousActions[1] = throttle;
+        continuousActions[0] = steer;
         //AddReward(-0.01f); // Time penalty, encourage the car to move faster
         Vector3 position = carController.transform.position;
         Quaternion rotation = carController.transform.rotation;
@@ -67,10 +71,10 @@ public class CarAgent : Agent
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("checkpoint" + currentCheckpointIndex))
+        if (other.gameObject.name == "Checkpoint ("+currentCheckpointIndex+")")
         {
             checkpointArray[currentCheckpointIndex] = true;
-            AddReward(1f);
+            AddReward(0.1f);
             Debug.Log("Checkpoint " + currentCheckpointIndex + " achieved");
             lastCheckpointTime = Time.time;
 
@@ -80,6 +84,7 @@ public class CarAgent : Agent
             {
                 Debug.Log("Car crosses the finish line after completing the course");
                 AddReward(5.0f);
+                recorder.Record = false;
                 EndEpisode();
             }
         }
@@ -88,8 +93,9 @@ public class CarAgent : Agent
     {
         if (collision.gameObject.CompareTag("invBarrier"))
         {
-            SetReward(-1f);
-            Debug.Log("Car touched wall");
+            AddReward(-1f);
+            //Debug.Log("Car touched wall");
+            recorder.Record = false;
             EndEpisode();
         }
     }
@@ -112,6 +118,7 @@ public class CarAgent : Agent
         {
             Debug.Log("Time out! More than a minute passed since the last checkpoint.");
             AddReward(-0.5f);
+            recorder.Record = false;
             EndEpisode();
         }
         
@@ -121,9 +128,10 @@ public class CarAgent : Agent
             float distanceMoved = Vector3.Distance(carController.transform.position, lastPosition);
             if (distanceMoved <= 0.1f)
             {
-                Debug.Log("Time out! Car is stuck.");
+                //Debug.Log("Time out! Car is stuck.");
                 AddReward(-1f);
                 timeSinceLastCheck = 0f;
+                recorder.Record = false;
                 EndEpisode();
             }
             timeSinceLastCheck = 0f;

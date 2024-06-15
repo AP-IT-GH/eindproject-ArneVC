@@ -36,6 +36,8 @@ TagManager:
   - checkpoint28
   - invBarrier
   - checkpoints
+  - checkpoint29
+  - checkpoint30
   layers:
   - Default
   - TransparentFX
@@ -43,7 +45,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Car
   - 
   - 
   - 

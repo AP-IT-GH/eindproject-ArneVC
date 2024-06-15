@@ -77,3 +77,5 @@ results/
 # data
 ImitationData/
 /[Aa]ssets/ImitationData.meta
+Demonstrations/
+/[Aa]ssets/Demonstrations.meta

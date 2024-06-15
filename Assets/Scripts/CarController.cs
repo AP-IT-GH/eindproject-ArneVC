@@ -55,6 +55,7 @@ public class CarController : MonoBehaviour
     {
         GetInputs();
         AnimateWheels();
+        ResetRotationdrift();
         //WheelEffects();
     }
 
@@ -122,6 +123,17 @@ public class CarController : MonoBehaviour
             }
 
         }
+    }
+    void ResetRotationdrift()
+    {
+        Quaternion currentRotation = carRb.rotation;
+
+        Quaternion newRotation = Quaternion.Euler(
+                currentRotation.eulerAngles.x,
+                currentRotation.eulerAngles.y,
+                0f
+        );
+        carRb.MoveRotation(newRotation);
     }
 
     void AnimateWheels()

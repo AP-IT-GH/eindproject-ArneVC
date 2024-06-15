@@ -23,7 +23,7 @@ public class Followcar : MonoBehaviour
             Destroy(rb);
         }
     }
-    void LateUpdate()
+    void Update()
     {
         if (car != null)
         {

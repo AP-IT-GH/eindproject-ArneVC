@@ -1,6 +1,12 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
+using UnityEngine.XR.Interaction.Toolkit.UI;
+using UnityEngine.EventSystems;
+
 
 public class CarController : MonoBehaviour
 {
@@ -54,6 +60,7 @@ public class CarController : MonoBehaviour
         //GetInputs();
         AnimateWheels();
         ResetRotationdrift();
+        //WheelEffects();
     }
 
     void LateUpdate()
@@ -121,18 +128,6 @@ public class CarController : MonoBehaviour
 
         }
     }
-
-    void AnimateWheels()
-    {
-        foreach (var wheel in wheels)
-        {
-            Quaternion rot;
-            Vector3 pos;
-            wheel.wheelCollider.GetWorldPose(out pos, out rot);
-            wheel.wheelModel.transform.position = pos;
-            wheel.wheelModel.transform.rotation = rot;
-        }
-    }
     void ResetRotationdrift()
     {
         Quaternion currentRotation = carRb.rotation;
@@ -145,6 +140,18 @@ public class CarController : MonoBehaviour
         carRb.MoveRotation(newRotation);
     }
 
+    void AnimateWheels()
+    {
+        foreach (var wheel in wheels)
+        {
+            Quaternion rot;
+            Vector3 pos;
+            wheel.wheelCollider.GetWorldPose(out pos, out rot);
+            wheel.wheelModel.transform.position = pos;
+            wheel.wheelModel.transform.rotation = rot;
+        }
+    }
+
     public void ResetCar()
     {
         carRb.velocity = Vector3.zero;
@@ -154,5 +161,4 @@ public class CarController : MonoBehaviour
         moveInput = 0;
         steerInput = 0;
     }
-
 }

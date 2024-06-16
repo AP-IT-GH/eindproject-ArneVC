@@ -14491,6 +14491,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &945032425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945032427}
+  - component: {fileID: 945032426}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &945032426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945032425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284f55ab602d7f14fa317d97cd1fe97c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerXrRig: {fileID: 2120745445}
+  BlackCarPrefab: {fileID: 2579706752629569988, guid: fd121c8b707bb0e43971faee9022091a, type: 3}
+  RedCarPrefab: {fileID: 4723386074206025166, guid: a41f3001049eae4448d80921b8dd89fa, type: 3}
+  BlueCarPrefab: {fileID: 5136578642570240814, guid: a5fa2b54c73996a4996fc6dc8fce5452, type: 3}
+  YellowCarPrefab: {fileID: 6091474699607131952, guid: fe837932bff688147a71926bc8931307, type: 3}
+  AICarPrefab: {fileID: 909252282428779412, guid: c667c8159c34d4941852a37629d0effb, type: 3}
+--- !u!4 &945032427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945032425}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -103.34372, y: 50.898827, z: 137.47227}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &946592650
 GameObject:
   m_ObjectHideFlags: 0
@@ -32612,6 +32662,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2120745445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4592956391713993908, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
+  m_PrefabInstance: {fileID: 714725028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2121902372
 GameObject:
   m_ObjectHideFlags: 0
@@ -32759,3 +32814,4 @@ SceneRoots:
   - {fileID: 534809569}
   - {fileID: 1796949340}
   - {fileID: 1660978437}
+  - {fileID: 945032427}

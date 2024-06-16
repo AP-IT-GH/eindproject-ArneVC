@@ -57,7 +57,7 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
-        //GetInputs();
+        GetInputs();
         AnimateWheels();
         ResetRotationdrift();
         //WheelEffects();

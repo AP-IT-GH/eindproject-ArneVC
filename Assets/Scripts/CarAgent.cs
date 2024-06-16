@@ -3,6 +3,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using System.IO; 
+using TensorFlow;
 using Unity.MLAgents.Demonstrations;
 public class CarAgent : Agent
 {

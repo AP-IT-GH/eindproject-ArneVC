@@ -15,6 +15,20 @@ Deze tutorial legt uit hoe je een AI-powered VR project vanaf nul kunt opzetten.
 - Python versie: 3.8
 - TensorFlow versie: 2.6.0
 - Unity versie: 2022.3.19f1
+  Creeër een 3D project, importeer Race car package[^1], Race kart model[^2], Racing Arch[^4] en Quick Outline[^5]. Gebruik vervolgens volgende packages.
+| (Package) naam | Versie |
+|---------------------------|-------------|
+| Unity versie | 2022.3.19f1 |
+| Python versie| 3.8|
+|TensorFlow versie| 2.6.0 |
+| ML Agents | 2.0.1 |
+| OpenXR Plugin | 1.9.1 |
+| XR Core Utilities | 2.3.0 |
+| XR Interaction Toolkit | 2.5.4 |
+| XR Legacy Input Helpers | 2.1.10 |
+| XR Plugin Management | 4.4.1 |
+
+Sleep de race kart model en race car in je scene.
 
 ### Verloop van de Simulatie
 De VR-omgeving bestaat uit een racebaan waarin de raceauto de baan moet afleggen. De ml-agent leert dit zichzelf op basis van acties en beloningen aan. De baan heeft bochten, U-bochten en barrières die hij hoort te ontwijken. Zodra hij de weg heeft afgelegd, stopt de episode.

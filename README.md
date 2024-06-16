@@ -65,6 +65,10 @@ De VR-omgeving bestaat uit een racebaan waarin de raceauto de baan moet afleggen
 
 ### Verbeteringen voor de Toekomst
 
-## Bronvermelding
-
+# Bronvermelding
+[^1]: [Race Car package](https://assetstore.unity.com/packages/3d/vehicles/race-car-package-141690) | 3D Vehicles | Unity Asset Store. (2021, 7 augustus). Unity Asset Store.
+[^2]: [Sketchfab.](https://sketchfab.com/3d-models/race-trackkarting-track-based-on-south-garda-32c21042ba144ce9bd2822a88d5b54ec) (z.d.). Race track/Karting Track based on South Garda - Download Free 3D model by Mauro3D (@maurogsw).
+[^3]: [Vanmillion Studios.](https://www.youtube.com/watch?v=jr4eb4F9PSQ) (2022, 16 april). Simple car controller in Unity 3D (Part 1- movement) | Easy Unity Tutorial 2022 [Video]. YouTube.
+[^4]: [Racing Arch  | 3D model.](https://www.cgtrader.com/free-3d-models/car/racing-car/racing-arch) (z.d.). CGTrader.
+[^5]: [Quick Outline](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488) (2022, 7 maart). Quick Outline world-space outline tool by Chris Nolet
 

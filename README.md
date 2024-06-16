@@ -37,9 +37,15 @@ De VR-omgeving bestaat uit een racebaan waarin de raceauto de baan moet afleggen
 - **Beloningen:** Zodra de training start begint de agent bestraffingen te krijgen (0,1). Dit is zodat de agent weet dat hij hoort te bewegen. Ook krijgt hij straffen van 0.01 wanneer hij achteruit rijdt. Hiermee zijn we zeker dat de agent vooruit rijdt, maar toch willen we de straffing kleiner houden dan niet bewegen, zodat de agent achteruit kan rijden als hij ergens vastzit. Voor het bereiken van een checkpoint krijgt de agent een beloning van 1,0. Eens hij de weg heeft afgelegd, krijgt hij een uiteindelijke beloning van 5,0.
 
 ### Beschrijving van de Objecten
-
+- **Race auto (speler)**: Dit is de speler/bestuurder die de racebaan zal voltooien via VR. Hierbij gaat de speler met snelheid door de racebaan en zal hij zo proberen de AI te verslaan.
+- **Race auto (Agent)**: Dit is de AI die de racebaan zal voltooien door middel van obstakels te vermijden. Hier gaat de AI zo efficient mogelijk de track voltooien zonder al te veel obstakels te raken. Deze obstakels bestaan uit zowel de barriers als de auto van de speler.
 
 ### Informatie van de One-Pager
+### Een korte samenvatting
+
+In het VR Racing-project nemen spelers het op tegen een auto die wordt bestuurd door AI in een VR. De speler moet het racebaan de finishlijn bereiken voordat de AI dat doet. De AI wordt getraind om obstakels en barrières te vermijden en zo snel mogelijk de finish te bereiken. De AI krijgt hierbij zijn rewards als dit lukt.
+
+Door de AI te implementeren met behulp van adversarial self-play kan deze continu verbeteren en strategieën ontwikkelen, wat de uitdaging vergroot. VR verhoogt de spelersbetrokkenheid, waardoor de game-ervaring realistischer en interactiever wordt. Door het gebruik van VR worden de spelers volledig ondergedompeld in de VR wereld en kunnen ze zich als echt formula one rijders achten.
 
 ### Afwijkingen van de One-Pager
 
@@ -69,4 +75,5 @@ De VR-omgeving bestaat uit een racebaan waarin de raceauto de baan moet afleggen
 [^3]: [Vanmillion Studios.](https://www.youtube.com/watch?v=jr4eb4F9PSQ) (2022, 16 april). Simple car controller in Unity 3D (Part 1- movement) | Easy Unity Tutorial 2022 [Video]. YouTube.
 [^4]: [Racing Arch  | 3D model.](https://www.cgtrader.com/free-3d-models/car/racing-car/racing-arch) (z.d.). CGTrader.
 [^5]: [Quick Outline](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488) (2022, 7 maart). Quick Outline world-space outline tool by Chris Nolet
+[^6]: Vanmillion Studios. (2022, 16 april). Simple car controller in Unity 3D (Part 1- movement) | Easy Unity Tutorial 2022 [Video]. YouTube. https://www.youtube.com/watch?v=jr4eb4F9PSQ
 

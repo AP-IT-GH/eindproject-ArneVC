@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fea37f1b26ebe24395e0d54d4eed70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  control: 1
+  control: 0
   maxAcceleration: 30
   brakeAcceleration: 50
   turnSensitivity: 1
@@ -440,6 +440,7 @@ MonoBehaviour:
   - wheelModel: {fileID: 1350231249755648485}
     wheelCollider: {fileID: 2434979092479910688}
     axel: 1
+  carRb: {fileID: 0}
 --- !u!65 &1121942528840200062
 BoxCollider:
   m_ObjectHideFlags: 0

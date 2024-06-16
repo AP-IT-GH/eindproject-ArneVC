@@ -20,6 +20,7 @@ class CSVHandler(FileSystemEventHandler):
         print(f"Event path: {event.src_path}")
         print(f"Input CSV path: {self.input_csv}")
         if os.path.abspath(event.src_path) == self.input_csv:
+            print("help")
             self.process_new_rows()
 
     def process_new_rows(self):

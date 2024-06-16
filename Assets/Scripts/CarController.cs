@@ -29,6 +29,7 @@ public class CarController : MonoBehaviour
         public WheelCollider wheelCollider;
         public Axel axel;
     }
+    public GameManager gameManager;
 
     public ControlMode control;
 
@@ -51,6 +52,7 @@ public class CarController : MonoBehaviour
 
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         carRb = GetComponent<Rigidbody>();
         carRb.centerOfMass = _centerOfMass;
     }
@@ -161,5 +163,8 @@ public class CarController : MonoBehaviour
         moveInput = 0;
         steerInput = 0;
     }
-
+    void OnTriggerEnter(Collider other)
+    {
+        gameManager.PlayerCarEntersTrigger(other);
+    }
 }

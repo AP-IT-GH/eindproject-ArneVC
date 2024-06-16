@@ -6,8 +6,12 @@ using Unity.MLAgents.Actuators;
 public class CarAgent : Agent
 {
     public CarController carController;
-    private bool[] checkpointArray = new bool[29];
-    private int currentCheckpointIndex = 0;
+    //private bool[] checkpointArray = new bool[29];
+    [SerializeField]private GameObject checkpointsContainer;
+    private Transform[] checkpoints;
+    private Transform[] crossedCheckpoints;
+    private Transform expectedCheckpoint;
+    private int indexExpectedCheckpoint;
     private float lastCheckpointTime;
     private Vector3 lastPosition;
     float timeSinceLastCheck;
@@ -19,8 +23,16 @@ public class CarAgent : Agent
     public override void OnEpisodeBegin()
     {
         carController.ResetCar();
-        checkpointArray = new bool[29];
-        currentCheckpointIndex = 0;
+        //checkpointArray = new bool[120];
+        indexExpectedCheckpoint = 0;
+        Transform[] allTransforms = checkpointsContainer.GetComponentsInChildren<Transform>();
+        checkpoints = new Transform[allTransforms.Length - 1];
+        for (int i = 1; i < allTransforms.Length; i++)
+        {
+            checkpoints[i - 1] = allTransforms[i];
+        }
+        expectedCheckpoint = checkpoints[indexExpectedCheckpoint];
+        crossedCheckpoints = new Transform[checkpoints.Length];
         lastCheckpointTime = Time.time;
         lastPosition = carController.transform.position;
         timeSinceLastCheck = 0f;
@@ -28,8 +40,7 @@ public class CarAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-            
-        sensor.AddObservation(currentCheckpointIndex);
+        sensor.AddObservation(indexExpectedCheckpoint);
         sensor.AddObservation(carController.transform.position);
         sensor.AddObservation(carController.transform.rotation);
         sensor.AddObservation(carController.carRb.velocity);
@@ -112,21 +123,40 @@ public class CarAgent : Agent
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("checkpoint" + currentCheckpointIndex))
+        if (other.CompareTag("checkpoint"))
         {
-            checkpointArray[currentCheckpointIndex] = true;
-            AddReward(1f);
-            Debug.Log("Checkpoint " + currentCheckpointIndex + " achieved");
-            lastCheckpointTime = Time.time;
+            Debug.Log("expected checkpoint:" + expectedCheckpoint.name);
 
-            currentCheckpointIndex = (currentCheckpointIndex + 1) % checkpointArray.Length;
-
-            if (currentCheckpointIndex == 1 && DidTheCarCollectAllCheckpoints())
+            if (other.gameObject.name == expectedCheckpoint.name)
             {
-                Debug.Log("Car crosses the finish line after completing the course");
-                AddReward(5.0f);
+                if (!DidTheCarCollectAllCheckpoints())
+                {
+                    AddReward(1f);
+                    Debug.Log("reached " + other.gameObject.name);
+                    crossedCheckpoints[indexExpectedCheckpoint] = expectedCheckpoint;
+                    indexExpectedCheckpoint = (indexExpectedCheckpoint + 1) % checkpoints.Length;
+                    expectedCheckpoint = checkpoints[indexExpectedCheckpoint];
+                    lastCheckpointTime = Time.time;
+                }
+                else
+                {
+                    Debug.Log("Car crosses the finish line after completing the course");
+                    AddReward(5.0f);
+                    EndEpisode();
+                }
+
+
+
+
+            } else if(other.gameObject.name != expectedCheckpoint.name)
+            {
+
+                Debug.Log("Wrong checkpoint!");
+                AddReward(-1f);
                 EndEpisode();
             }
+
+
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -150,21 +180,22 @@ public class CarAgent : Agent
 
     private bool DidTheCarCollectAllCheckpoints()
     {
-        foreach (bool checkpointflag in checkpointArray)
-        {
-            if (!checkpointflag)
-            {
-                return false;
-            }
-        }
-        return true;
+        //foreach (bool checkpointflag in checkpointArray)
+        //{
+        //    if (!checkpointflag)
+        //    {
+        //        return false;
+        //    }
+        //}
+        //return true;
+        return crossedCheckpoints == checkpoints;
     }
 
     private void Update()
     {
-        if (Time.time - lastCheckpointTime > 60f) // If more than a minute passed since the last checkpoint
+        if (Time.time - lastCheckpointTime > 300f) // If more than a minute passed since the last checkpoint
         {
-            Debug.Log("Time out! More than a minute passed since the last checkpoint.");
+            Debug.Log("Time out! More than 5 minutes passed since the last checkpoint.");
             AddReward(-0.5f);
             EndEpisode();
         }

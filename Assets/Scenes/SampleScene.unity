@@ -17123,7 +17123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
       propertyPath: m_Name
-      value: Car (1)
+      value: AICar
       objectReference: {fileID: 0}
     - target: {fileID: 1740865480142414, guid: 663342408c5e6e24f8e0cb584631c6ad, type: 3}
       propertyPath: m_Layer

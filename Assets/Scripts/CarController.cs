@@ -87,25 +87,6 @@ public class CarController : MonoBehaviour
             moveInput = Input.GetAxis("Vertical");
             steerInput = Input.GetAxis("Horizontal");
         }
-        else
-        {
-            if (Input.GetKey(KeyCode.I))
-            {
-                moveInput = -1;
-            }
-            if (Input.GetKey(KeyCode.K))
-            {
-                moveInput += 1;
-            }
-            if (Input.GetKey(KeyCode.J))
-            {
-                steerInput += -1;
-            }
-            if (Input.GetKey(KeyCode.L))
-            {
-                steerInput += 1;
-            }
-        }
     }
 
     void Move()

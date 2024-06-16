@@ -11,11 +11,9 @@ Deze tutorial legt uit hoe je een AI-powered VR project vanaf nul kunt opzetten.
 - Objecten en hun gedragingen beschrijven.
 - Resultaten van AI-training analyseren met Tensorboard.
 
-### Installatie
-- Python versie: 3.8
-- TensorFlow versie: 2.6.0
-- Unity versie: 2022.3.19f1
-  Creeër een 3D project, importeer Race car package[^1], Race kart model[^2], Racing Arch[^4] en Quick Outline[^5]. Gebruik vervolgens volgende packages.
+### Installatie 
+Creeër een 3D project, importeer Race car package[^1], Race kart model[^2], Racing Arch[^4] en Quick Outline[^5]. Gebruik vervolgens volgende packages.
+  
 | (Package) naam | Versie |
 |---------------------------|-------------|
 | Unity versie | 2022.3.19f1 |

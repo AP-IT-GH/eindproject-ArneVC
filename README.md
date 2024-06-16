@@ -41,6 +41,11 @@ De VR-omgeving bestaat uit een racebaan waarin de raceauto de baan moet afleggen
 - **Race auto (Agent)**: Dit is de AI die de racebaan zal voltooien door middel van obstakels te vermijden. Hier gaat de AI zo efficient mogelijk de track voltooien zonder al te veel obstakels te raken. Deze obstakels bestaan uit zowel de barriers als de auto van de speler.
 
 ### Informatie van de One-Pager
+### Een korte samenvatting
+
+In het VR Racing-project nemen spelers het op tegen een auto die wordt bestuurd door AI in een VR. De speler moet het racebaan de finishlijn bereiken voordat de AI dat doet. De AI wordt getraind om obstakels en barrières te vermijden en zo snel mogelijk de finish te bereiken. De AI krijgt hierbij zijn rewards als dit lukt.
+
+Door de AI te implementeren met behulp van adversarial self-play kan deze continu verbeteren en strategieën ontwikkelen, wat de uitdaging vergroot. VR verhoogt de spelersbetrokkenheid, waardoor de game-ervaring realistischer en interactiever wordt. Door het gebruik van VR worden de spelers volledig ondergedompeld in de VR wereld en kunnen ze zich als echt formula one rijders achten.
 
 ### Afwijkingen van de One-Pager
 

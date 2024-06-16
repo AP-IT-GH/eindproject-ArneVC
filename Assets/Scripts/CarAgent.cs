@@ -6,15 +6,16 @@ using Unity.MLAgents.Actuators;
 public class CarAgent : Agent
 {
     public CarController carController;
-    //private bool[] checkpointArray = new bool[29];
-    [SerializeField]private GameObject checkpointsContainer;
+    [SerializeField] private GameObject checkpointsContainer;
     private Transform[] checkpoints;
     private Transform[] crossedCheckpoints;
     private Transform expectedCheckpoint;
     private int indexExpectedCheckpoint;
     private float lastCheckpointTime;
     private Vector3 lastPosition;
-    float timeSinceLastCheck;
+    private float timeSinceLastCheck;
+    private int lapCount;
+
     public override void Initialize()
     {
         carController = GetComponent<CarController>();
@@ -23,7 +24,6 @@ public class CarAgent : Agent
     public override void OnEpisodeBegin()
     {
         carController.ResetCar();
-        //checkpointArray = new bool[120];
         indexExpectedCheckpoint = 0;
         Transform[] allTransforms = checkpointsContainer.GetComponentsInChildren<Transform>();
         checkpoints = new Transform[allTransforms.Length - 1];
@@ -36,6 +36,7 @@ public class CarAgent : Agent
         lastCheckpointTime = Time.time;
         lastPosition = carController.transform.position;
         timeSinceLastCheck = 0f;
+        lapCount = 0;
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -48,21 +49,24 @@ public class CarAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-
         float moveInput = 0f;
         float steerInput = 0f;
 
         switch (actions.DiscreteActions[0])
         {
-            case 0: moveInput = 0f;
+            case 0:
+                moveInput = 0f;
                 break;
-            case 1: moveInput = -1f;
+            case 1:
+                moveInput = -1f;
                 break;
-            case 2: moveInput = 1f;
+            case 2:
+                moveInput = 1f;
                 break;
         }
 
-        switch(actions.DiscreteActions[1]) {
+        switch (actions.DiscreteActions[1])
+        {
             case 0:
                 steerInput = 0f;
                 break;
@@ -74,11 +78,9 @@ public class CarAgent : Agent
                 break;
         }
 
-
         carController.GetInputs(moveInput, steerInput);
 
-
-        if(moveInput == 0)
+        if (moveInput == 0)
         {
             AddReward(-0.1f);
         }
@@ -87,7 +89,6 @@ public class CarAgent : Agent
         {
             AddReward(-0.01f);
         }
-
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -118,7 +119,6 @@ public class CarAgent : Agent
         var discreteActions = actionsOut.DiscreteActions;
         discreteActions[0] = move;
         discreteActions[1] = steer;
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -129,36 +129,37 @@ public class CarAgent : Agent
 
             if (other.gameObject.name == expectedCheckpoint.name)
             {
-                if (!DidTheCarCollectAllCheckpoints())
+                if (indexExpectedCheckpoint == 0)
                 {
-                    AddReward(1f);
-                    Debug.Log("reached " + other.gameObject.name);
+                    lapCount++;
+                    if (lapCount == 2)
+                    {
+                        Debug.Log("Car crosses the finish line after completing the course");
+                        AddReward(5.0f);
+                        EndEpisode();
+                        return;
+                    }
+                }
+
+                AddReward(1f);
+                Debug.Log("reached " + other.gameObject.name);
+                if (indexExpectedCheckpoint < crossedCheckpoints.Length)
+                {
                     crossedCheckpoints[indexExpectedCheckpoint] = expectedCheckpoint;
-                    indexExpectedCheckpoint = (indexExpectedCheckpoint + 1) % checkpoints.Length;
-                    expectedCheckpoint = checkpoints[indexExpectedCheckpoint];
-                    lastCheckpointTime = Time.time;
                 }
-                else
-                {
-                    Debug.Log("Car crosses the finish line after completing the course");
-                    AddReward(5.0f);
-                    EndEpisode();
-                }
-
-
-
-
-            } else if(other.gameObject.name != expectedCheckpoint.name)
+                indexExpectedCheckpoint = (indexExpectedCheckpoint + 1) % checkpoints.Length;
+                expectedCheckpoint = checkpoints[indexExpectedCheckpoint];
+                lastCheckpointTime = Time.time;
+            }
+            else
             {
-
                 Debug.Log("Wrong checkpoint!");
                 AddReward(-1f);
                 EndEpisode();
             }
-
-
         }
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("invBarrier"))
@@ -180,26 +181,25 @@ public class CarAgent : Agent
 
     private bool DidTheCarCollectAllCheckpoints()
     {
-        //foreach (bool checkpointflag in checkpointArray)
-        //{
-        //    if (!checkpointflag)
-        //    {
-        //        return false;
-        //    }
-        //}
-        //return true;
-        return crossedCheckpoints == checkpoints;
+        for (int i = 0; i < crossedCheckpoints.Length; i++)
+        {
+            if (crossedCheckpoints[i] == null)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     private void Update()
     {
-        if (Time.time - lastCheckpointTime > 300f) // If more than a minute passed since the last checkpoint
+        if (Time.time - lastCheckpointTime > 300f) // If more than 5 minutes passed since the last checkpoint
         {
             Debug.Log("Time out! More than 5 minutes passed since the last checkpoint.");
             AddReward(-0.5f);
             EndEpisode();
         }
-        
+
         timeSinceLastCheck += Time.deltaTime;
         if (timeSinceLastCheck > 3f)
         {
@@ -214,6 +214,5 @@ public class CarAgent : Agent
             timeSinceLastCheck = 0f;
             lastPosition = carController.transform.position;
         }
-        
     }
 }

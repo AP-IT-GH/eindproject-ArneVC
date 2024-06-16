@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public void SpawnPlayerCar(string carName)
     {
         GameObject PlayerCar = Instantiate(ReturnCorrectPlayerCarPrefabBySelectedCarName(carName), new Vector3(-84.68f, 1.7f, 90.63f), Quaternion.Euler(1.532f, 89.656f, 0f));
+        PlayerXrRig.transform.position = new Vector3(-84.68f, 1.7f, 90.63f);
         FollowCarScript = PlayerXrRig.AddComponent<Followcar>();
         FollowCarScript.car = PlayerCar.transform;
     }

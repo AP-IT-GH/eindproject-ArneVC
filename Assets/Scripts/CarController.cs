@@ -1,6 +1,12 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
+using UnityEngine.XR.Interaction.Toolkit.UI;
+using UnityEngine.EventSystems;
+
 
 public class CarController : MonoBehaviour
 {
@@ -54,6 +60,7 @@ public class CarController : MonoBehaviour
         GetInputs();
         AnimateWheels();
         ResetRotationdrift();
+        //WheelEffects();
     }
 
     void LateUpdate()
@@ -121,6 +128,17 @@ public class CarController : MonoBehaviour
 
         }
     }
+    void ResetRotationdrift()
+    {
+        Quaternion currentRotation = carRb.rotation;
+
+        Quaternion newRotation = Quaternion.Euler(
+                currentRotation.eulerAngles.x,
+                currentRotation.eulerAngles.y,
+                0f
+        );
+        carRb.MoveRotation(newRotation);
+    }
 
     void AnimateWheels()
     {
@@ -132,17 +150,6 @@ public class CarController : MonoBehaviour
             wheel.wheelModel.transform.position = pos;
             wheel.wheelModel.transform.rotation = rot;
         }
-    }
-    void ResetRotationdrift()
-    {
-        Quaternion currentRotation = carRb.rotation;
-
-        Quaternion newRotation = Quaternion.Euler(
-                currentRotation.eulerAngles.x,
-                currentRotation.eulerAngles.y,
-                0f
-        );
-        carRb.MoveRotation(newRotation);
     }
 
     public void ResetCar()

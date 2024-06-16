@@ -24,6 +24,9 @@ behaviors:
         strength: 0.005
         gamma: 0.99
         demo_path: Assets/Demonstrations/racedemo.demo
+    behavioral_cloning:
+      strength: 0.5
+      demo_path: Assets/Demonstrations/racedemo.demo
     max_steps: 100000000
     time_horizon: 64
     summary_freq: 2000

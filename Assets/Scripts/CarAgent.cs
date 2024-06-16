@@ -3,7 +3,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using System.IO; 
-using TensorFlow;
+using Unity.Barracuda;
 using Unity.MLAgents.Demonstrations;
 public class CarAgent : Agent
 {
@@ -85,7 +85,7 @@ public class CarAgent : Agent
             {
                 Debug.Log("Car crosses the finish line after completing the course");
                 AddReward(5.0f);
-                recorder.Record = false;
+                // recorder.Record = false;
                 EndEpisode();
             }
         }
@@ -96,7 +96,7 @@ public class CarAgent : Agent
         {
             AddReward(-1f);
             //Debug.Log("Car touched wall");
-            recorder.Record = false;
+            // recorder.Record = false;
             EndEpisode();
         }
     }
@@ -119,7 +119,7 @@ public class CarAgent : Agent
         {
             Debug.Log("Time out! More than a minute passed since the last checkpoint.");
             AddReward(-0.5f);
-            recorder.Record = false;
+            // recorder.Record = false;
             EndEpisode();
         }
         
@@ -132,7 +132,7 @@ public class CarAgent : Agent
                 //Debug.Log("Time out! Car is stuck.");
                 AddReward(-1f);
                 timeSinceLastCheck = 0f;
-                recorder.Record = false;
+                // recorder.Record = false;
                 EndEpisode();
             }
             timeSinceLastCheck = 0f;

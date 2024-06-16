@@ -73,3 +73,9 @@ crashlytics-build.properties
 
 # mlagents training results
 results/
+Assets/CarAgentDemo.demo
+Assets/CarAgentDemo.demo.meta
+Assets/oldCarAgentDemo.demo.meta
+Assets/oldCarAgentDemo.demo
+demos/CarAgentDemo.demo
+demos/CarAgentDemo.demo

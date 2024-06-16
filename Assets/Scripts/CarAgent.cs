@@ -28,6 +28,8 @@ public class CarAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
+            
+        sensor.AddObservation(currentCheckpointIndex);
         sensor.AddObservation(carController.transform.position);
         sensor.AddObservation(carController.transform.rotation);
         sensor.AddObservation(carController.carRb.velocity);
@@ -44,6 +46,8 @@ public class CarAgent : Agent
             case 0: moveInput = 0f;
                 break;
             case 1: moveInput = -1f;
+                break;
+            case 2: moveInput = 1f;
                 break;
         }
 
@@ -65,16 +69,44 @@ public class CarAgent : Agent
 
         if(moveInput == 0)
         {
+            AddReward(-0.1f);
+        }
+
+        if (moveInput == 1)
+        {
             AddReward(-0.01f);
         }
+
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
- 
-        var continuousActions = actionsOut.ContinuousActions;
-        continuousActions[0] = -Input.GetAxis("Vertical"); // throttle
-        continuousActions[1] = Input.GetAxis("Horizontal"); // steer
+        int move = 0;
+        int steer = 0;
+
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            move = 1;
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            move = 2;
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            steer = 2;
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            steer = 1;
+        }
+
+        var discreteActions = actionsOut.DiscreteActions;
+        discreteActions[0] = move;
+        discreteActions[1] = steer;
 
     }
 

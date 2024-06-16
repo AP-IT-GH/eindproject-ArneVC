@@ -14,10 +14,11 @@ public class GameManager : MonoBehaviour
     
     private  Followcar FollowCarScript;
     private int finishLineCounter = 0;
+    private bool checkPoint7Crossed = false;
 
     private void Update()
     {
-        if(finishLineCounter > 1)
+        if(finishLineCounter > 1 && checkPoint7Crossed)
         {
             ResetScene();
         }
@@ -41,6 +42,10 @@ public class GameManager : MonoBehaviour
         if(checkpoint.CompareTag("checkpoint0"))
         {
             finishLineCounter++;
+        }
+        if(checkpoint.CompareTag("checkpoint7"))
+        {
+            checkPoint7Crossed = true;
         }
     }
     public void SpawnPlayerCar(string carName)

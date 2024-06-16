@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 3784310580585235316}
   - component: {fileID: 4106690323478091091}
   - component: {fileID: 6734563022857880346}
+  - component: {fileID: 2026096224020142602}
   - component: {fileID: 139120713900164206}
   m_Layer: 6
   m_Name: PlayerBlue
@@ -405,6 +406,19 @@ MonoBehaviour:
   - wheelModel: {fileID: 1409149564868278233}
     wheelCollider: {fileID: 8831344286733550042}
     axel: 1
+  carRb: {fileID: 0}
+--- !u!114 &2026096224020142602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5136578642570240814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c357a7de4290a724aa15ef15920e92d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &139120713900164206
 BoxCollider:
   m_ObjectHideFlags: 0

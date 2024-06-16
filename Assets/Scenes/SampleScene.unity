@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5288,38 +5288,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &253433132
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 253433133}
-  m_Layer: 0
-  m_Name: Teleport Area Setup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &253433133
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253433132}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.96, y: 6.21, z: 135.66962}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1340231007}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &256108662
 GameObject:
   m_ObjectHideFlags: 0
@@ -5521,11 +5489,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &261208048 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4592956391713993908, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
-  m_PrefabInstance: {fileID: 714725028}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &263170617
 GameObject:
   m_ObjectHideFlags: 0
@@ -19469,6 +19432,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1236750258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243269773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInvisibleBarrier: 0
 --- !u!1 &1243269773
 GameObject:
   m_ObjectHideFlags: 0
@@ -19480,14 +19456,10 @@ GameObject:
   - component: {fileID: 1243269774}
   - component: {fileID: 1243269776}
   - component: {fileID: 1243269775}
+  - component: {fileID: 1236750258}
   m_Layer: 2
   m_Name: Checkpoint (79)
   m_TagString: checkpoint0
-  - component: {fileID: 1236750257}
-  - component: {fileID: 1236750258}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19508,16 +19480,6 @@ Transform:
   m_Father: {fileID: 912609935}
   m_LocalEulerAnglesHint: {x: 0, y: 81.602, z: 0}
 --- !u!114 &1243269775
-  m_GameObject: {fileID: 1236750256}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -142.35045, y: 9.884375, z: 175.3583}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1236750258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19526,10 +19488,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1243269773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be655bc8f4d55ed4cad5db47b2fc9c5d, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInvisibleBarrier: 0
 --- !u!65 &1243269776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19551,18 +19512,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
-  m_GameObject: {fileID: 1236750256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 284f55ab602d7f14fa317d97cd1fe97c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerXrRig: {fileID: 261208048}
-  BlackCarPrefab: {fileID: 2579706752629569988, guid: fd121c8b707bb0e43971faee9022091a, type: 3}
-  RedCarPrefab: {fileID: 4723386074206025166, guid: a41f3001049eae4448d80921b8dd89fa, type: 3}
-  BlueCarPrefab: {fileID: 5136578642570240814, guid: a5fa2b54c73996a4996fc6dc8fce5452, type: 3}
-  YellowCarPrefab: {fileID: 6091474699607131952, guid: fe837932bff688147a71926bc8931307, type: 3}
-  AICarPrefab: {fileID: 3018196154880344098, guid: e0b75b0937552c04bb91530908a184db, type: 3}
 --- !u!1 &1245444114
 GameObject:
   m_ObjectHideFlags: 0
@@ -33192,13 +33141,11 @@ BoxCollider:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1236750257}
   - {fileID: 1777337495}
   - {fileID: 1129409311}
   - {fileID: 1766105725}
   - {fileID: 101022243}
   - {fileID: 1102290371}
-  - {fileID: 253433133}
   - {fileID: 714725028}
   - {fileID: 113018950}
   - {fileID: 534809569}

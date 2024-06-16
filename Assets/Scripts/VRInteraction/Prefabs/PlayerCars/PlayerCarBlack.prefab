@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 4639969824435751540}
   - component: {fileID: 2826390229936412447}
   - component: {fileID: 1199814727954543785}
+  - component: {fileID: -2872540701863207615}
   - component: {fileID: 936762479453746259}
   m_Layer: 6
   m_Name: PlayerCarBlack
@@ -253,6 +254,19 @@ MonoBehaviour:
   - wheelModel: {fileID: 7339395867443663063}
     wheelCollider: {fileID: 3710731513312578752}
     axel: 1
+  carRb: {fileID: 0}
+--- !u!114 &-2872540701863207615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579706752629569988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c357a7de4290a724aa15ef15920e92d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &936762479453746259
 BoxCollider:
   m_ObjectHideFlags: 0

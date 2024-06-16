@@ -13,6 +13,16 @@ public class GameManager : MonoBehaviour
     public GameObject AICarPrefab;
     
     private  Followcar FollowCarScript;
+    private int finishLineCounter = 0;
+    private bool checkPoint7Crossed = false;
+
+    private void Update()
+    {
+        if(finishLineCounter > 1 && checkPoint7Crossed)
+        {
+            ResetScene();
+        }
+    }
     public void CarHover(GameObject hoveredCar)
     {
         Debug.Log("Hovered over: " + hoveredCar.name);
@@ -26,6 +36,17 @@ public class GameManager : MonoBehaviour
         Debug.Log("Selected: " + selectedCar.name);
         SpawnAiCar();
         SpawnPlayerCar(selectedCar.name);
+    }
+    public void PlayerCarEntersTrigger(Collider checkpoint)
+    {
+        if(checkpoint.CompareTag("checkpoint0"))
+        {
+            finishLineCounter++;
+        }
+        if(checkpoint.CompareTag("checkpoint7"))
+        {
+            checkPoint7Crossed = true;
+        }
     }
     public void SpawnPlayerCar(string carName)
     {

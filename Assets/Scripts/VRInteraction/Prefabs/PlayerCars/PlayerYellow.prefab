@@ -518,6 +518,7 @@ GameObject:
   - component: {fileID: 6274842421224680475}
   - component: {fileID: 6678373444522963105}
   - component: {fileID: 6118140399394302005}
+  - component: {fileID: 8546500169715005032}
   - component: {fileID: 691031840207586343}
   - component: {fileID: 3490310436545501282}
   - component: {fileID: 5713562711237291313}
@@ -596,6 +597,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8546500169715005032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6091474699607131952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c357a7de4290a724aa15ef15920e92d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &691031840207586343
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -654,6 +667,7 @@ MonoBehaviour:
   - wheelModel: {fileID: 3717467897830317052}
     wheelCollider: {fileID: 3986052955057585222}
     axel: 1
+  carRb: {fileID: 0}
 --- !u!65 &5713562711237291313
 BoxCollider:
   m_ObjectHideFlags: 0

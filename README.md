@@ -69,4 +69,5 @@ De VR-omgeving bestaat uit een racebaan waarin de raceauto de baan moet afleggen
 [^3]: [Vanmillion Studios.](https://www.youtube.com/watch?v=jr4eb4F9PSQ) (2022, 16 april). Simple car controller in Unity 3D (Part 1- movement) | Easy Unity Tutorial 2022 [Video]. YouTube.
 [^4]: [Racing Arch  | 3D model.](https://www.cgtrader.com/free-3d-models/car/racing-car/racing-arch) (z.d.). CGTrader.
 [^5]: [Quick Outline](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488) (2022, 7 maart). Quick Outline world-space outline tool by Chris Nolet
+[^6]: Vanmillion Studios. (2022, 16 april). Simple car controller in Unity 3D (Part 1- movement) | Easy Unity Tutorial 2022 [Video]. YouTube. https://www.youtube.com/watch?v=jr4eb4F9PSQ
 

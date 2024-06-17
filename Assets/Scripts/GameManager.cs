@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if(finishLineCounter > 1)
+        {
+            Debug.LogWarning("went over 1");
+        }
         if(finishLineCounter > 1 && checkPoint27Crossed)
         {
             ResetScene();
@@ -40,7 +44,7 @@ public class GameManager : MonoBehaviour
     }
     public void PlayerCarEntersTrigger(Collider checkpoint)
     {
-        if(checkpoint.CompareTag("checkpoint0"))
+        if(checkpoint.CompareTag("checkpointstartfinish"))
         {
             finishLineCounter++;
         }
@@ -62,8 +66,9 @@ public class GameManager : MonoBehaviour
     }
     private void ResetScene()
     {
+        Debug.LogWarning("finish line counter: " + finishLineCounter);
+        Debug.LogWarning("checkpoint 27: " + checkPoint27Crossed);
         Debug.LogWarning("reset");
-        Debug.LogWarning(Environment.StackTrace);
         SceneManager.LoadScene("SampleScene");
     }
     private GameObject ReturnCorrectPlayerCarPrefabBySelectedCarName(string carName)

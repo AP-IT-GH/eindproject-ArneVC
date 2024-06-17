@@ -38,6 +38,7 @@ TagManager:
   - checkpoints
   - checkpoint29
   - checkpoint30
+  - checkpointstartfinish
   layers:
   - Default
   - TransparentFX
@@ -49,8 +50,6 @@ TagManager:
   - 
   - PlayerCar
   - AICar
-  - 
-  - 
   - 
   - 
   - 

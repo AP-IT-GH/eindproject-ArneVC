@@ -100,6 +100,8 @@ We merkten echter ook op dat de agent nooit echt goed genoeg is geworden om de g
 
 ### Samenvatting
 
+De AI werd in het algemeen wel beter, maar de methoden / de omgeving waren te complex voor de AI om correct te leren goed rond een racetrack te rijden.
+
 ### Persoonlijke Visie
 
 ### Verbeteringen voor de Toekomst

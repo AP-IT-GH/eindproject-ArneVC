@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,38 +15,42 @@ public class GameManager : MonoBehaviour
     
     private  Followcar FollowCarScript;
     private int finishLineCounter = 0;
-    private bool checkPoint7Crossed = false;
+    private bool checkPoint27Crossed = false;
 
     private void Update()
     {
-        if(finishLineCounter > 1 && checkPoint7Crossed)
+        if(finishLineCounter > 1)
+        {
+            Debug.LogWarning("went over 1");
+        }
+        if(finishLineCounter > 1 && checkPoint27Crossed)
         {
             ResetScene();
         }
     }
     public void CarHover(GameObject hoveredCar)
     {
-        Debug.Log("Hovered over: " + hoveredCar.name);
+        //Debug.Log("Hovered over: " + hoveredCar.name);
     }
     public void CarHoverExit(GameObject hoveredCar)
     {
-        Debug.Log("Stopped hovering over: " + hoveredCar.name);
+        //Debug.Log("Stopped hovering over: " + hoveredCar.name);
     }
     public void CarSelect(GameObject selectedCar)
     {
-        Debug.Log("Selected: " + selectedCar.name);
+        //Debug.Log("Selected: " + selectedCar.name);
         SpawnAiCar();
         SpawnPlayerCar(selectedCar.name);
     }
     public void PlayerCarEntersTrigger(Collider checkpoint)
     {
-        if(checkpoint.CompareTag("checkpoint0"))
+        if(checkpoint.CompareTag("checkpointstartfinish"))
         {
             finishLineCounter++;
         }
-        if(checkpoint.CompareTag("checkpoint7"))
+        if(checkpoint.CompareTag("checkpoint27"))
         {
-            checkPoint7Crossed = true;
+            checkPoint27Crossed = true;
         }
     }
     public void SpawnPlayerCar(string carName)
@@ -61,6 +66,9 @@ public class GameManager : MonoBehaviour
     }
     private void ResetScene()
     {
+        Debug.LogWarning("finish line counter: " + finishLineCounter);
+        Debug.LogWarning("checkpoint 27: " + checkPoint27Crossed);
+        Debug.LogWarning("reset");
         SceneManager.LoadScene("SampleScene");
     }
     private GameObject ReturnCorrectPlayerCarPrefabBySelectedCarName(string carName)

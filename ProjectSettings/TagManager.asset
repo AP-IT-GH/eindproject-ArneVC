@@ -34,6 +34,11 @@ TagManager:
   - checkpoint26
   - checkpoint27
   - checkpoint28
+  - invBarrier
+  - checkpoints
+  - checkpoint29
+  - checkpoint30
+  - checkpointstartfinish
   layers:
   - Default
   - TransparentFX
@@ -41,10 +46,10 @@ TagManager:
   - 
   - Water
   - UI
+  - Car
+  - 
   - PlayerCar
   - AICar
-  - 
-  - 
   - 
   - 
   - 

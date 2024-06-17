@@ -73,8 +73,10 @@ crashlytics-build.properties
 
 # mlagents training results
 results/
-/[Aa]ssets/results.meta
-Demonstrations/
-/[Aa]ssets/Demonstrations.meta
+
+
+# data
 ImitationData/
 /[Aa]ssets/ImitationData.meta
+Demonstrations/
+/[Aa]ssets/Demonstrations.meta

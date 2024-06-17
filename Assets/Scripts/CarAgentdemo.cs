@@ -1,26 +1,47 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
-using System.IO; 
-using Unity.Barracuda;
-using Unity.MLAgents.Demonstrations;
-public class CarAgent : Agent
+
+public class CarAgentdemo : Agent
 {
+    private List<float[]> actions = new List<float[]>();
+    private int currentActionIndex = 0;
     public CarController carController;
     private bool[] checkpointArray = new bool[126];
     private int currentCheckpointIndex = 0;
     private float lastCheckpointTime;
     private Vector3 lastPosition;
     private float timeSinceLastCheck;
-    private DemonstrationRecorder recorder;
+    public float actionDelay = 0.02f; // Adjust as needed
+    private bool isTakingActions = true;
+    private float steerInput;
+    void Start()
+    {
+        // Read CSV file and store actions
+        string path = "Assets/ImitationData/training_data2.csv"; // Update with your actual file path
+        StreamReader reader = new StreamReader(path);
+        reader.ReadLine();
+        while (!reader.EndOfStream)
+        {
+            string line = reader.ReadLine();
+            string[] values = line.Split(',');
+
+            float[] action = new float[1];
+            
+            action[0] = float.Parse(values[10]);
+            actions.Add(action);
+        }
+
+        reader.Close();
+    }
     public override void Initialize()
     {
         carController = GetComponent<CarController>();
-        recorder = FindObjectOfType<DemonstrationRecorder>();
-        recorder.Record = true;
     }
-
     public override void OnEpisodeBegin()
     {
         carController.ResetCar();
@@ -30,60 +51,77 @@ public class CarAgent : Agent
         lastPosition = carController.transform.position;
         timeSinceLastCheck = 0f;
     }
-
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(carController.transform.position);
         sensor.AddObservation(carController.transform.rotation);
         sensor.AddObservation(carController.carRb.velocity);
     }
-
-    public override void OnActionReceived(ActionBuffers actions)
+    public override void OnActionReceived(ActionBuffers actionBuffers)
     {
+        int action = actionBuffers.DiscreteActions[0];
+        switch (action)
+    {
+        case 0:
+            // Perform action 0 (e.g., move forward)
+            steerInput = 0.0f;
+            break;
+        case 1:
+            // Perform action 1 (e.g., turn left)
+            steerInput = -1.0f;
+            break;
+        case 2:
+            // Perform action 2 (e.g., turn right)
+            steerInput = 1.0f;
+            break;
+        default:
+            // Handle unexpected action index
+            Debug.LogError("Unexpected action index received: " + action);
+            break;
+    }
         //float moveInput = Mathf.Clamp(actions.ContinuousActions[1], -1f, 0f);
-        float steerInput = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
+        //float steerInput = Mathf.Clamp(actions.ContinuousActions[0], -1f, 1f);
         float moveInput = -1.0f;
         carController.MoveInput(moveInput);
         carController.SteerInput(steerInput);
-        if (moveInput >= -0.1f)
-        {
-            AddReward(-0.001f);
-        }
-        
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        var continuousActions = actionsOut.ContinuousActions;
-        float throttle = -Input.GetAxis("Vertical"); // throttle
-        float steer = Input.GetAxis("Horizontal"); // steer
-        throttle = -1.0f;
-
-        continuousActions[1] = throttle;
-        continuousActions[0] = steer;
-        //AddReward(-0.01f); // Time penalty, encourage the car to move faster
-        Vector3 position = carController.transform.position;
-        Quaternion rotation = carController.transform.rotation;
-        Vector3 velocity = carController.carRb.velocity;
-
-        LogData(position, rotation, velocity, steer, throttle);
-        
+        var discreteActions = actionsOut.DiscreteActions;
+        discreteActions.Clear();
+        float steer;
+        if (-1.0f == actions[currentActionIndex][0])
+        {
+            discreteActions[0] = 1; // Action index 1: Turn left
+            steer = -1.0f;
+        }
+        else if (1.0f == actions[currentActionIndex][0])
+        {
+            discreteActions[0] = 2; // Action index 2: Turn right
+            steer = 1.0f;
+        }
+        else if (0.0f == actions[currentActionIndex][0])
+        {
+            discreteActions[0] = 0; // Action index 0: Move forward
+            steer = 0.0f;
+        }
+        currentActionIndex++;
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Checkpoint ("+currentCheckpointIndex+")")
         {
             checkpointArray[currentCheckpointIndex] = true;
             AddReward(0.1f);
-            //Debug.Log("Checkpoint " + currentCheckpointIndex + " achieved");
+            Debug.Log("Checkpoint " + currentCheckpointIndex + " achieved");
             lastCheckpointTime = Time.time;
 
             currentCheckpointIndex = (currentCheckpointIndex + 1) % checkpointArray.Length;
 
             if (currentCheckpointIndex == 1 && DidTheCarCollectAllCheckpoints())
             {
-                //Debug.Log("Car crosses the finish line after completing the course");
+                Debug.Log("Car crosses the finish line after completing the course");
                 AddReward(5.0f);
                 // recorder.Record = false;
                 EndEpisode();
@@ -160,5 +198,16 @@ public class CarAgent : Agent
 
         // Append the data to the CSV file
         File.AppendAllText(filePath, data);
+    }
+    IEnumerator WaitForNextAction()
+    {
+        // Prevent taking actions while waiting
+        isTakingActions = false;
+
+        // Wait for the specified action delay
+        yield return new WaitForSeconds(actionDelay);
+
+        // Allow taking actions again
+        isTakingActions = true;
     }
 }

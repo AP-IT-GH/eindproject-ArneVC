@@ -51,7 +51,7 @@ In het VR Racing-project nemen spelers het op tegen een auto die wordt bestuurd 
 Door de AI te implementeren met behulp van adversarial self-play kan deze continu verbeteren en strategieën ontwikkelen, wat de uitdaging vergroot. VR verhoogt de spelersbetrokkenheid, waardoor de game-ervaring realistischer en interactiever wordt. Door het gebruik van VR worden de spelers volledig ondergedompeld in de VR wereld en kunnen ze zich als echt formula one rijders achten.
 
 ### Afwijkingen van de One-Pager
-
+Oorspronkelijk werd er enkel gepland om de agent te trainen door Reinforcement learning. Hierin gaat de agent willekeurige acties uitvoeren en zien welke acties hem een beloning zorgen. Echter door een te complexe racebeen hebben we de hulp van Imitation leaning ingeschakeld. Bij Imitation learning voeren we de acties manueel uit en leren we de agent aan door middel van demonstraties.
 
 ## Resultaten
 

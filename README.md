@@ -82,7 +82,7 @@ Door de AI te implementeren met behulp van adversarial self-play kan deze contin
 
 ### Afwijkingen van de One-Pager
 
-Oorspronkelijk werd er enkel gepland om de agent te trainen door Reinforcement learning. Hierin gaat de agent willekeurige acties uitvoeren en zien welke acties hem een beloning zorgen. Echter door een te complexe racebeen hebben we de hulp van Imitation leaning ingeschakeld. Bij Imitation learning voeren we de acties manueel uit en leren we de agent aan door middel van demonstraties. Verder traint de AI enkel en alleen tegen zichzelf. De AI functioneert in het uiteindelijke spel als een ghost car die door de speler wel zal gezien kunnen worden maar functioneert eigenlijk appart van de speler. Het doel van het spel is om simpelweg sneller dan de AI rond te rijden en niet echt te racen. Verder hebben we ook het gewenste resultaat niet uit onze training zien te krijgen, hierover meer verder in dit document.
+Oorspronkelijk werd er enkel gepland om de agent te trainen door Reinforcement learning. Hierin gaat de agent willekeurige acties uitvoeren en zien welke acties hem een beloning zorgen. Echter door een te complexe racebaan hebben we de hulp van Imitation leaning ingeschakeld. Bij Imitation learning voeren we de acties manueel uit en leren we de agent aan door middel van demonstraties. Verder traint de AI enkel en alleen tegen zichzelf. De AI functioneert in het uiteindelijke spel als een ghost car die door de speler wel zal gezien kunnen worden maar functioneert eigenlijk appart van de speler. Het doel van het spel is om simpelweg sneller dan de AI rond te rijden en niet echt te racen. Verder hebben we ook het gewenste resultaat niet uit onze training zien te krijgen, hierover meer verder in dit document.
 
 ## Resultaten
 

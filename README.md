@@ -48,7 +48,7 @@ De VR-omgeving bestaat uit een racebaan waarin de raceauto de baan moet afleggen
 
 ### Informatie van de One-Pager
 
-(wat volgt is een letterlijke overname van de one-pager)
+(wat volgt is een letterlijke overname van de [one-pager](https://github.com/AP-IT-GH/eindproject-ArneVC/blob/main/OnePager.md))
 
 > #### De Logica van de VR Simulatie
 >

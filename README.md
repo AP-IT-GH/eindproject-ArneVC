@@ -74,6 +74,8 @@ De speler (human) gebruikt een VR-bril met de daarbij horende controllers om het
 
 ### afwijking van one-pager
 
+We zijn in een paar dingen afgeweken van de one-pager. Allereerst traint de AI enkel en alleen tegen zichzelf. De AI functioneert in het uiteindelijke spel als een ghost car die door de speler wel zal gezien kunnen worden maar functioneert eigenlijk appart van de speler. Het doel van het spel is om simpelweg sneller dan de AI rond te rijden en niet echt te racen. Verder hebben we ook het gewenste resultaat niet uit onze training zien te krijgen, hierover meer verder in dit document.
+
 ### Een korte samenvatting
 
 In het VR Racing-project nemen spelers het op tegen een auto die wordt bestuurd door AI in een VR. De speler moet het racebaan de finishlijn bereiken voordat de AI dat doet. De AI wordt getraind om obstakels en barrières te vermijden en zo snel mogelijk de finish te bereiken. De AI krijgt hierbij zijn rewards als dit lukt.

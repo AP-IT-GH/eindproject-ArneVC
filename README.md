@@ -86,11 +86,15 @@ Oorspronkelijk werd er enkel gepland om de agent te trainen door Reinforcement l
 
 ### Resultaten van de training met Tensorboard
 
+- ![grafiek resultaat](./images/graph.png)
+
 ### Beschrijving van de Tensorboard Grafieken
 
-De cumulative reward-functie lijkt geleidelijk te stijgen. Dit wil zeggen dat de agent zich op de juiste manier aan het trainen. Hoe langer hij traint, hoe meer hij weet waar de rewards te vinden zijn. We verwachten ook dat de lengte van de episosed geleidelijk dalen. Dit komt omdat de agent sneller en sneller zijn opdracht kan voltooiien.
+De cumulative reward-functie lijkt geleidelijk te stijgen. Dit wil zeggen dat de agent zich op de juiste manier aan het trainen. Hoe langer hij traint, hoe meer hij weet waar de rewards te vinden zijn. We verwachten ook dat de lengte van de episosed geleidelijk dalen. Dit komt omdat de agent sneller en sneller zijn opdracht kan voltooien.
 
 ### Opvallende Waarnemingen
+
+We merkten echter ook op dat de agent nooit echt goed genoeg is geworden om de gewenste taak te voltooien (grafiek geeft niet het volledige beeld weer). Buiten een paar uitschieters is de agent nooit goed genoeg geworden om de racetrack snel en goed te voltooien. Om dit probleem op te lossen hebben we een poging gedaan met imitation learning, maar dit is echter ook in het water gevallen. Het standaard getrainde model is het model dat in het spel achter het stuur van de AI auto te vinden is.
 
 ## Conclusie
 

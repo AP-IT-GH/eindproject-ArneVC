@@ -48,6 +48,8 @@ De VR-omgeving bestaat uit een racebaan waarin de raceauto de baan moet afleggen
 
 ### Informatie van de One-Pager
 
+(wat volgt is een letterlijke overname van de one-pager)
+
 #### De Logica van de VR Simulatie
 
 In onze project gaat de speler het opnemen tegen een AI. Hierbij gaat de speler, in een VR omgeving, de auto besturen doorheen de racebaan. De speler zorgt er voor dat hij de finish behaalt voor de AI dit doet. De AI wordt getraind om zo snel mogelijk de finish te behalen en krijgt rewards als hij effectief obstacles vermijd en de finish bereikt voor de speler (human).
@@ -104,7 +106,11 @@ De AI werd in het algemeen wel beter, maar de methoden / de omgeving waren te co
 
 ### Persoonlijke Visie
 
+Een AI leren om rond een racetrack te rijden is zeer complex. Om dit te verwezeljken volstaat het niet om de AI "in het diepe te gooien" en direct over de gehele racetrack te laten rijden.
+
 ### Verbeteringen voor de Toekomst
+
+Verbeteringen wouden in het trainingsproces kunnen aangebracht worden bij de volgende punten. In de plaats van de AI over de gehele racetrack te training (veel en moeilijke bochten / stukken) zou het al beter zijn om de Ai eerst te trainen de muur niet te raken op een recht stuk baan. Verder zou het ook al een verbetering zijn om de AI te belonen voor elk stukje progressie naar het einde van de track, niet alleen naar specifieke checkpoints. Zo zou de AI niet meer nodeloos achteruit proberen rijden, aangezien dit direct een negatief resultaat zou opleveren.
 
 # Bronvermelding
 

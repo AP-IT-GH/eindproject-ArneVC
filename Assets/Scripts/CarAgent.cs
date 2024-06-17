@@ -76,14 +76,14 @@ public class CarAgent : Agent
         {
             checkpointArray[currentCheckpointIndex] = true;
             AddReward(0.1f);
-            Debug.Log("Checkpoint " + currentCheckpointIndex + " achieved");
+            //Debug.Log("Checkpoint " + currentCheckpointIndex + " achieved");
             lastCheckpointTime = Time.time;
 
             currentCheckpointIndex = (currentCheckpointIndex + 1) % checkpointArray.Length;
 
             if (currentCheckpointIndex == 1 && DidTheCarCollectAllCheckpoints())
             {
-                Debug.Log("Car crosses the finish line after completing the course");
+                //Debug.Log("Car crosses the finish line after completing the course");
                 AddReward(5.0f);
                 // recorder.Record = false;
                 EndEpisode();

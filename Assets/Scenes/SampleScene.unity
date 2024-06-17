@@ -19114,7 +19114,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1243269774}
   - component: {fileID: 1243269776}
-  - component: {fileID: 1243269775}
   - component: {fileID: 1236750258}
   m_Layer: 2
   m_Name: Checkpoint (79)
@@ -19138,18 +19137,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 912609935}
   m_LocalEulerAnglesHint: {x: 0, y: 81.602, z: 0}
---- !u!114 &1243269775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243269773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1243269776
 BoxCollider:
   m_ObjectHideFlags: 0

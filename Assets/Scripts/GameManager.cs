@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,15 +26,15 @@ public class GameManager : MonoBehaviour
     }
     public void CarHover(GameObject hoveredCar)
     {
-        Debug.Log("Hovered over: " + hoveredCar.name);
+        //Debug.Log("Hovered over: " + hoveredCar.name);
     }
     public void CarHoverExit(GameObject hoveredCar)
     {
-        Debug.Log("Stopped hovering over: " + hoveredCar.name);
+        //Debug.Log("Stopped hovering over: " + hoveredCar.name);
     }
     public void CarSelect(GameObject selectedCar)
     {
-        Debug.Log("Selected: " + selectedCar.name);
+        //Debug.Log("Selected: " + selectedCar.name);
         SpawnAiCar();
         SpawnPlayerCar(selectedCar.name);
     }
@@ -61,6 +62,8 @@ public class GameManager : MonoBehaviour
     }
     private void ResetScene()
     {
+        Debug.LogWarning("reset");
+        Debug.LogWarning(Environment.StackTrace);
         SceneManager.LoadScene("SampleScene");
     }
     private GameObject ReturnCorrectPlayerCarPrefabBySelectedCarName(string carName)

@@ -72,10 +72,6 @@ Er zijn verschillende redenen waarom het interessanter is om dit project uit te 
 
 De speler (human) gebruikt een VR-bril met de daarbij horende controllers om het spel te besturen. De controllers maken het mogelijk dat de auto kan rijden, draaien, afremmen en achteruit rijden. De VR-bril zal het hele zicht van de speler innemen de rol van een traditionele computer- of TV-scherm overnemen.
 
-### afwijking van one-pager
-
-We zijn in een paar dingen afgeweken van de one-pager. Allereerst traint de AI enkel en alleen tegen zichzelf. De AI functioneert in het uiteindelijke spel als een ghost car die door de speler wel zal gezien kunnen worden maar functioneert eigenlijk appart van de speler. Het doel van het spel is om simpelweg sneller dan de AI rond te rijden en niet echt te racen. Verder hebben we ook het gewenste resultaat niet uit onze training zien te krijgen, hierover meer verder in dit document.
-
 ### Een korte samenvatting
 
 In het VR Racing-project nemen spelers het op tegen een auto die wordt bestuurd door AI in een VR. De speler moet het racebaan de finishlijn bereiken voordat de AI dat doet. De AI wordt getraind om obstakels en barrières te vermijden en zo snel mogelijk de finish te bereiken. De AI krijgt hierbij zijn rewards als dit lukt.
@@ -84,7 +80,7 @@ Door de AI te implementeren met behulp van adversarial self-play kan deze contin
 
 ### Afwijkingen van de One-Pager
 
-Oorspronkelijk werd er enkel gepland om de agent te trainen door Reinforcement learning. Hierin gaat de agent willekeurige acties uitvoeren en zien welke acties hem een beloning zorgen. Echter door een te complexe racebeen hebben we de hulp van Imitation leaning ingeschakeld. Bij Imitation learning voeren we de acties manueel uit en leren we de agent aan door middel van demonstraties.
+Oorspronkelijk werd er enkel gepland om de agent te trainen door Reinforcement learning. Hierin gaat de agent willekeurige acties uitvoeren en zien welke acties hem een beloning zorgen. Echter door een te complexe racebeen hebben we de hulp van Imitation leaning ingeschakeld. Bij Imitation learning voeren we de acties manueel uit en leren we de agent aan door middel van demonstraties. Verder traint de AI enkel en alleen tegen zichzelf. De AI functioneert in het uiteindelijke spel als een ghost car die door de speler wel zal gezien kunnen worden maar functioneert eigenlijk appart van de speler. Het doel van het spel is om simpelweg sneller dan de AI rond te rijden en niet echt te racen. Verder hebben we ook het gewenste resultaat niet uit onze training zien te krijgen, hierover meer verder in dit document.
 
 ## Resultaten
 

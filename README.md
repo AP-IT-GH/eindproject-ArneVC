@@ -92,7 +92,7 @@ Oorspronkelijk werd er enkel gepland om de agent te trainen door Reinforcement l
 
 ### Beschrijving van de Tensorboard Grafieken
 
-De cumulative reward-functie lijkt geleidelijk te stijgen. Dit wil zeggen dat de agent zich op de juiste manier aan het trainen. Hoe langer hij traint, hoe meer hij weet waar de rewards te vinden zijn. We verwachten ook dat de lengte van de episosed geleidelijk dalen. Dit komt omdat de agent sneller en sneller zijn opdracht kan voltooien.
+De cumulative reward-functie lijkt geleidelijk te stijgen. Dit wil zeggen dat de agent zich op de juiste manier aan het trainen. Hoe langer hij traint, hoe meer hij weet waar de rewards te vinden zijn. We verwachten ook dat de lengte van de episodes geleidelijk dalen. Dit komt omdat de agent sneller en sneller zijn opdracht kan voltooien.
 
 ### Opvallende Waarnemingen
 
@@ -110,7 +110,7 @@ Een AI leren om rond een racetrack te rijden is zeer complex. Om dit te verwezel
 
 ### Verbeteringen voor de Toekomst
 
-Verbeteringen wouden in het trainingsproces kunnen aangebracht worden bij de volgende punten. In de plaats van de AI over de gehele racetrack te training (veel en moeilijke bochten / stukken) zou het al beter zijn om de Ai eerst te trainen de muur niet te raken op een recht stuk baan. Verder zou het ook al een verbetering zijn om de AI te belonen voor elk stukje progressie naar het einde van de track, niet alleen naar specifieke checkpoints. Zo zou de AI niet meer nodeloos achteruit proberen rijden, aangezien dit direct een negatief resultaat zou opleveren.
+Verbeteringen wouden in het trainingsproces kunnen aangebracht worden bij de volgende punten. In de plaats van de AI over de gehele racetrack te training (veel en moeilijke bochten / stukken) zou het al beter zijn om de AI eerst te trainen de muur niet te raken op een recht stuk baan. Verder zou het ook al een verbetering zijn om de AI te belonen voor elk stukje progressie naar het einde van de track, niet alleen naar specifieke checkpoints. Zo zou de AI niet meer nodeloos achteruit proberen rijden, aangezien dit direct een negatief resultaat zou opleveren.
 
 # Bronvermelding
 

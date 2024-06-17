@@ -1,4 +1,5 @@
 
+
 # AI-Powered VR Racing Game Tutorial
 
 
@@ -39,6 +40,8 @@ De VR-omgeving bestaat uit een racebaan waarin de raceauto de baan moet afleggen
 ### Beschrijving van de Objecten
 - **Race auto (speler)**: Dit is de speler/bestuurder die de racebaan zal voltooien via VR. Hierbij gaat de speler met snelheid door de racebaan en zal hij zo proberen de AI te verslaan.
 - **Race auto (Agent)**: Dit is de AI die de racebaan zal voltooien door middel van obstakels te vermijden. Hier gaat de AI zo efficient mogelijk de track voltooien zonder al te veel obstakels te raken. Deze obstakels bestaan uit zowel de barriers als de auto van de speler.
+- **Checkpoint**: Er zijn een heleboel checkpoints geplaatst over de racebaan heen. Deze dienen vooral om de agent te leiden naar de juiste kant.
+- **Onzichtbare barrières**: Deze barrières die ervoor zorgen dat zowel de speler als de agent op de weg blijven. Zodra de auto in aanraking komt met een barriére, eindigt de episode.
 
 ### Informatie van de One-Pager
 ### Een korte samenvatting
@@ -56,7 +59,7 @@ Door de AI te implementeren met behulp van adversarial self-play kan deze contin
 
 
 ### Beschrijving van de Tensorboard Grafieken
-
+De cumulative reward-functie lijkt geleidelijk te stijgen. Dit wil zeggen dat de agent zich op de juiste manier aan het trainen. Hoe langer hij traint, hoe meer hij weet waar de rewards te vinden zijn. We verwachten ook dat de lengte van de episosed geleidelijk dalen. Dit komt omdat de agent sneller en sneller zijn opdracht kan voltooiien.
 
 ### Opvallende Waarnemingen
 
@@ -73,7 +76,7 @@ Door de AI te implementeren met behulp van adversarial self-play kan deze contin
 [^1]: [Race Car package](https://assetstore.unity.com/packages/3d/vehicles/race-car-package-141690) | 3D Vehicles | Unity Asset Store. (2021, 7 augustus). Unity Asset Store.
 [^2]: [Sketchfab.](https://sketchfab.com/3d-models/race-trackkarting-track-based-on-south-garda-32c21042ba144ce9bd2822a88d5b54ec) (z.d.). Race track/Karting Track based on South Garda - Download Free 3D model by Mauro3D (@maurogsw).
 [^3]: [Vanmillion Studios.](https://www.youtube.com/watch?v=jr4eb4F9PSQ) (2022, 16 april). Simple car controller in Unity 3D (Part 1- movement) | Easy Unity Tutorial 2022 [Video]. YouTube.
-[^4]: [Racing Arch  | 3D model.](https://www.cgtrader.com/free-3d-models/car/racing-car/racing-arch) (z.d.). CGTrader.
+[^4]: [Racing Arch  | 3D model.](https://www.cgtrader.com/free-3d-models/car/racing-car/racing-arch) (z.d.). CGTrader.
 [^5]: [Quick Outline](https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488) (2022, 7 maart). Quick Outline world-space outline tool by Chris Nolet
 [^6]: Vanmillion Studios. (2022, 16 april). Simple car controller in Unity 3D (Part 1- movement) | Easy Unity Tutorial 2022 [Video]. YouTube. https://www.youtube.com/watch?v=jr4eb4F9PSQ
 
